@@ -22,7 +22,13 @@
         <hibernate-validator.version>5.1.0.Final</hibernate-validator.version>
         
     </properties>
-    
+    <repositories>
+        <repository>
+            <id>lib-local</id>
+            <name>lib</name>
+            <url>file:${project.basedir}/lib</url>
+        </repository>
+    </repositories>
     <dependencies>
         <dependency>
             <groupId>javax</groupId>
@@ -75,7 +81,11 @@
             <artifactId>junit</artifactId>
             <version>4.11</version>
         </dependency>
-        
+        <dependency>
+            <groupId>com.Webgame</groupId>
+            <artifactId>sqljdbc</artifactId>
+            <version>4</version>
+        </dependency>
          <!-- Spring Security -->
         <dependency>
             <groupId>org.springframework.security</groupId>
