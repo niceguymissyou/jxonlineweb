@@ -20,7 +20,7 @@
         <spring.version>4.1.4.RELEASE</spring.version>
         <spring-security.version>3.2.5.RELEASE</spring-security.version>
         <hibernate-validator.version>5.1.0.Final</hibernate-validator.version>
-        
+        <mysql-connector-java.version>5.1.30</mysql-connector-java.version>
     </properties>
     <repositories>
         <repository>
@@ -81,10 +81,16 @@
             <artifactId>junit</artifactId>
             <version>4.11</version>
         </dependency>
+        <!--  jbdc-->
         <dependency>
             <groupId>com.Webgame</groupId>
             <artifactId>sqljdbc</artifactId>
             <version>4</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql-connector-java.version}</version>
         </dependency>
          <!-- Spring Security -->
         <dependency>
