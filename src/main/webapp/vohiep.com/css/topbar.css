@@ -1,0 +1,90 @@
+@charset "utf-8";
+/* CSS Document */
+#topbar{ width:100%; height:45px; background-image:url(../images/topbar/images/bg_02.png); background-repeat:repeat-x; z-index:9000; position:relative;}
+#topbar .center{width:1000px; margin-left:auto; margin-right:auto; float:none}
+#topbar .center h2{ width:160px; padding: 10px 5px; margin:0 0 0 10px; float:left;}
+#topbar .center h2 a { background-image:url(../images/topbar/images/logo_05.png); background-repeat:no-repeat; display:block; width:148px; height:21px; text-indent:-999px;}
+#topbar .center h2 a:hover{ background-image:url(../images/topbar/images/logo_hover_05.png);}
+#topbar .welcome-reg{ width:180px; height:auto; margin-left:0px; float:left; padding:10px 0px; overflow:hidden;}
+#topbar .welcome-reg ul {padding:0px; display:inline-block; margin:5px 0;}
+#topbar .welcome-reg ul li{float:left;}
+#topbar .welcome-reg ul li a{ font-family:tahoma; font-size:14px; padding: 0 5px;}
+#topbar .welcome-reg ul li a{ color:#FF0;}
+#topbar .welcome-reg ul li a:hover {color:#F30; font-weight:200;}
+#topbar .game{float:left; width:565px; height:39px; padding:3px 10px; overflow:hidden; background-image:url(../images/topbar/images/game_05.png); background-repeat:no-repeat; background-position: 0 2px;}
+#topbar .game ul li a{color:#fff000 !important; display:block; padding:3px; height:26px;}
+#topbar .game ul li a:hover { background-color:#333;}
+#topbar .game ul li a img {width:26px; height:26px; float:left; margin-right:15px;}
+#topbar .game ul li a p { font-family: Tahoma, Geneva, sans-serif; font-size:14px; text-transform:uppercase; float:left; padding: 1px 5px; margin:5px 0;}
+/*sub-menu*/
+#topbar .welcome-reg ul#navlist { font-family: sans-serif; position:absolute; z-index:9999; }
+
+#topbar .welcome-reg ul#navlist a
+{
+text-decoration: none;
+}
+
+#topbar .welcome-reg ul#navlist, ul#navlist ul, ul#navlist li
+{
+margin: 0px;
+padding: 0px;
+list-style-type: none;
+}
+#topbar .welcome-reg ul#navlist li#active{width:130px; overflow:hidden; margin:-3px 0 0 0; display:block; padding:1px; height:30px;}
+#topbar .welcome-reg ul#navlist li { float: left; }
+
+#topbar .welcome-reg ul#navlist li a
+{
+color: #ffff00;
+padding: 3px;
+}
+
+#topbar .welcome-reg ul#navlist li a:hover
+{
+color: #ffff00;
+}
+
+#topbar .welcome-reg ul#navlist li a:active
+{
+color: #cccccc;
+}
+
+#topbar .welcome-reg ul#subnavlist { display: none; background-color:#666; }
+#topbar .welcome-reg ul#subnavlist li {float: none; border-bottom: solid 1px #333; }
+
+#topbar .welcome-reg ul#subnavlist li a
+{
+padding: 0px;
+margin: 0px;
+text-align:center;
+}
+
+#topbar .welcome-reg ul#navlist li:hover ul#subnavlist
+{
+display: block;
+position: absolute;
+font-size: 8pt;
+padding-top: 5px;
+}
+
+#topbar .welcome-reg ul#navlist li:hover ul#subnavlist li a
+{
+display: block;
+width: 10em;
+border: none;
+padding: 2px;
+}
+
+#topbar .welcome-reg ul#navlist li:hover ul#subnavlist li a:hover { background-color:#333; }
+
+/*game*/
+#slider2 { width: 565px; height: 35px; overflow:hidden; }
+#slider2 .viewport { float: left; width: 485px; height: 35px; overflow: hidden; position: relative; }
+#slider2 .buttons { display: block; margin: 4px 10px 0 0; float: left; background-image:url(../images/topbar/images/pre_05.png); background-repeat:no-repeat; width:20px; height:27px; text-indent:-999px;}
+#slider2 .buttons:hover{background-image:url(../images/topbar/images/pre_hover_05.png)}
+#slider2 .next { margin: 4px 0 0 10px; background-image:url(../images/topbar/images/next_07.png); background-repeat:no-repeat; text-indent:-999px; }
+#slider2 .next:hover{background-image:url(../images/topbar/images/next_hover_07.png); width:20px; height:27px;}
+#slider2 .disable { visibility: hidden; }
+#slider2 .overview { list-style: none; position: absolute; padding: 0; margin: 0; left: 0; top: 0; }
+#slider2 .overview li{ float: left; margin: 0 20px 0 0; padding: 1px; height: 35px; /*width: 160px;*/}
+
