@@ -1,0 +1,14 @@
+/***********************************************
+****Import css files:***************************
+***********************************************/
+/*Global css (M?c d?nh):*/
+@import url('master.css');
+
+/*Customize*/
+@import url('customize.css');
+
+/*Data list:*/
+@import url('data_list.css');
+
+/*Layouts css (phan loai khung):*/
+@import url('layout.css');

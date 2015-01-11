@@ -1,0 +1,255 @@
+@charset "utf-8";
+/*============================================================
+Mr TuanPhong (info@vietstylish.net)
+Ver:07-2009
+Support: IE6, IE7, FF2, FF3, Opera 9.62, Chrome 1.0.154.36
+***********************************************/
+
+/***********************************************/
+/***** Global Settings *************************/
+/***********************************************/
+ 
+html, body {
+	margin:0px;
+	padding:0px;
+} 
+body{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#3B5A4A;
+	background-color:#D6DED4;
+}
+
+/***********************************************/ 
+/***** Links ***********************************/
+/***********************************************/ 
+a  {
+	text-decoration:none;
+	color:#3B5A4A;
+}
+a:hover{
+	/*color:#95AA99;*/
+	color:#D49508;
+}
+/***********************************************/
+/***** Headings ********************************/
+/***********************************************/ 
+h1, h2, h3, h4, h5, h6, p { 
+	margin:0px; 
+	padding:0px;
+} 
+h1 {
+	font-size:2em; 
+	padding:0.8em 0 0.8em 0; 
+	letter-spacing:-1px;
+}
+h2 {
+	font-size:1.5em; 
+	padding:0.8em 0 0.8em 0; 
+	letter-spacing:-1px;
+} 
+h3 {
+	font-size:1.25em; 
+	padding:0.8em 0 0.8em 0;
+}
+h4 {
+	font-size:1em; 
+	padding:1em 0 1em 0;
+}
+
+/***********************************************/ 
+/***** Common Formatting ***********************/
+/***********************************************/
+/*p {
+	padding-bottom:1em;
+	margin-bottom:1em;
+}
+*/
+ul, ol {
+	/*margin:0;
+	padding:0 0 1.25em 0;*/
+}
+ 
+blockquote { /*quote*/
+	margin:1.25em;
+	padding:1.25em 1.25em 0 1.25em;
+}
+ 
+small {
+	font-size:0.85em;
+}
+ 
+img {
+	border:0; margin:0; padding:0;
+	}
+hr { /*Dòng ngan cách */
+	border:1px solid #999;
+	height:1px; /*For IE*/
+	border-top:0px;	/*For FF*/
+
+	} 
+sup { /*Th?t du?i*/
+	position:relative;
+	bottom:0.3em;
+	vertical-align:baseline;
+	}
+ 
+sub { /*Lên trên*/
+	position:relative;
+	bottom:-0.2em;
+	vertical-align:baseline;
+	}
+ 
+acronym, abbr { /*Gi?i nghia cho t? vi?t t?t*/
+	cursor:help;
+	letter-spacing:1px;
+	border-bottom:1px dashed;
+	}
+
+/***********************************************/
+/***** Forms ***********************************/
+/***********************************************/
+img {border:0;}
+img, input, select {vertical-align:middle;}
+body, img, form, fieldset {margin:0; padding:0;}
+body, input, select, textarea {font-size:12px; font-family:Arial; color:#414d4c;}
+
+form {
+	margin:0;
+	padding:0;
+	display:inline;
+	}
+fieldset {
+	border:1px solid #bbb;
+	padding:5px 10px;
+	}
+legend {
+	font-weight:bold;
+	color:#333333;
+	font-size:1.25em;
+	} 
+input, select, textarea {
+	font:1em Arial, Helvetica, sans-serif;
+	margin:0px;
+	}
+ 
+textarea {
+	/*width:100%;*/
+	line-height:1.25;
+	border:1px solid #ccc; 
+	padding:3px; 
+	margin-bottom:3px; 
+	font:11px tahoma; 
+	color:#333333;
+	}
+textarea:hover{ 
+	border:1px solid #777; background:url(../images/bg-input-text.html) left top;
+}
+ 
+label { /*thay vì tr? vào radio thì tr? luôn vào text có bao lable*/
+	/*cursor:pointer;*/
+}
+	
+optgroup { /*là m?t thành ph?n trong select , r?t h?u d?ng khi phân chia */
+	background-color:#E8E7E1;
+}
+
+optgroup option {
+	background-color:#FFFFFF;
+	font:1em Arial, Helvetica, sans-serif;
+}
+
+dl {
+	margin:0px;
+	margin-bottom:10px;
+	padding:0px;
+	}
+
+dt {	
+	padding:0px;
+	margin:0px;
+	}
+
+dd { 
+	margin-left:20px; 
+	margin-bottom:4px;
+	}
+
+/***********************************************/
+/***** Tables **********************************/
+/***********************************************/
+ 
+table 			{ border:0; margin:0 0 0 0; padding:0; } 
+/*table tr td 	{ padding:2px; }*/
+
+/***********************************************/ 
+/***** Wrapper *********************************/
+/***********************************************/ 
+.wrap          { width:960px;margin:0 auto; }
+
+/***********************************************/ 
+/***** Global Classes **************************/
+/***********************************************/ 
+ 
+.clearThis		{ clear:both;font-size:0px;line-height:0px;height:0px;}
+.clear         	{ clear:both; }
+.clear-left    	{ clear:left; }
+.float-left    	{ float:left; }
+.float-right   	{ float:right; }
+.float-none		{ float:none; }
+ 
+.text-left     	{ text-align:left; }
+.text-right    	{ text-align:right; }
+.text-center   	{ text-align:center; }
+.text-justify  	{ text-align:justify; }
+ 
+.normal			{ font-weight:normal;}
+.bold          	{ font-weight:bold; }
+.italic        	{ font-style:italic; }
+.underline     	{ background:url(../images/underLine.html) repeat-x bottom;padding-bottom:8px;}
+.highlight     	{ background:#ffc; }
+.small			{ font-size:0.8em;}
+ 
+.img-left      	{ float:left; margin:4px 10px 4px 0; }
+.img-right     	{ float:right; margin:4px 0 4px 10px; }
+ 
+.nopadding     	{ padding:0; }
+.nomargin		{ margin:0px;}
+.noindent      	{ margin-left:0;padding-left:0; }
+.nobullet      	{ list-style:none;list-style-image:none; }
+.noborder		{ border:0px;}
+
+.border-solid	{ border-style:solid}
+.border-dashed	{ border-style:dashed}
+.border-dotted	{ border-style:dotted}
+
+.display-block	{ display:block}
+.display-none	{ display:none}
+.display-inline	{ display:inline-block}
+
+/*.overflow-y		{overflow-y:scroll;}*/
+.overflow-auto		{overflow:auto;}
+.overflow-hidden{overflow:hidden;}
+
+.no-border		{ border:0px;}
+
+.no-data, .status, .error { background:#FFF9D7 none repeat scroll 0 0; border:1px solid #E2C822; padding:8px;}
+.no-data		{ border-color:#E2C822;}
+.status 		{ border-color:#E2C822;}
+.error			{ border-color:#E2C822;}
+
+.relative 		{position:relative;}
+
+.black6		{ color:#666 !important;}
+.black0		{ color:#000 !important;}
+.black3		{ color:#333 !important;}
+.colorGrey	{ color:#333333 !important;}
+.colorGreen { color:#447A01 !important;}
+.colorOrange{ color:#D49508 !important;}
+.colorRed	{ color:#D71A1A !important;}
+.color01	{ color:#656565 !important;;}
+.color02	{ color:#999 !important;;}
+
+.fontSize-11{ font-size:11px !important;}
+
+

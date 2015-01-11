@@ -1,0 +1,48 @@
+@CHARSET "ISO-8859-1";
+
+#server .mid ul.lis-l , #server .mid ul.lis-r {
+	float: left;
+	width: 200px;
+	list-style: none;
+	padding-left: 27px;
+}
+
+
+#server .mid ul li span.new, #server .mid ul li span.bao-tri, #server .mid .new1 span.bao-tri,#server .mid ul li span.dong-nghit, #server .mid .new1 span.dong-nghit, #server .mid ul li span.bung-no, #server .mid .new1 span.bung-no, #server .mid ul li span.chat-nich, #server .mid .new1 span.chat-nich,#server .mid ul li span.luu-thong, #server .mid .new1 span.luu-thong,#server .mid ul li span.soi-dong, #server .mid .new1 span.soi-dong  {
+	display:inline-block;
+	line-height:25px;
+	width:52px !important;
+	text-indent:-9999px;
+	margin-left:5px;
+}
+#server .mid ul li span.new, #server .mid .new1 span.new   {
+	background:url("../images/icons/status_server/newPic.gif") no-repeat scroll 0 50% transparent;
+}
+
+#server .mid ul li span.bao-tri, #server .mid .new1 span.bao-tri {
+	background:url("../images/icons/status_server/btPic.png") no-repeat scroll 0 50% transparent;
+}
+
+#server .mid ul li span.soi-dong, #server .mid .new1 span.soi-dong   {
+	background:url("../images/icons/status_server/sdPic.png") no-repeat scroll 0 50% transparent;
+}
+
+#server .mid ul li span.bao-tri, #server .mid .new1 span.bao-tri {
+	background:url("../images/icons/status_server/btPic.png") no-repeat scroll 0 50% transparent;
+}
+
+#server .mid ul li span.dong-nghit, #server .mid .new1 span.dong-nghit {
+	background:url("../images/icons/status_server/dnPic.png") no-repeat scroll 0 50% transparent;
+}
+
+#server .mid ul li span.bung-no, #server .mid .new1 span.bung-no {
+	background:url("../images/icons/status_server/bnPic.png") no-repeat scroll 0 50% transparent;
+}
+
+#server .mid ul li span.chat-nich, #server .mid .new1 span.chat-nich {
+	background:url("../images/icons/status_server/cnPic.png") no-repeat scroll 0 50% transparent;
+}
+
+#server .mid ul li span.luu-thong, #server .mid .new1 span.luu-thong {
+	background:url("../images/icons/status_server/ltPic.png") no-repeat scroll 0 50% transparent;
+}

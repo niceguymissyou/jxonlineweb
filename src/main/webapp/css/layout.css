@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*Center of page:*/
+.page-center { margin:0px auto;}
+
+/*Percent:*/
+.w10pe { width:10%;}
+.w20pe { width:20%;}
+.w30pe { width:30%;}
+.w40pe { width:40%;}
+.w50pe { width:50%;}
+.w60pe { width:60%;}
+.w70pe { width:70%;}
+.w80pe { width:80%;}
+.w90pe { width:90%;}
+.w100pe { width:100%;}
+
+.w100px { width:100px;}
+.w115px { width:115px;}
+.w150px { width:150px;}
+.w200px { width:200px;}
+.w250px { width:250px;}
+.w300px { width:300px;}
+.w700px { width:700px;}
+.w960px { width:960px;}
+.w980px { width:980px;}
+
+.mb5px { margin-bottom:5px;}
+.mb10px { margin-bottom:10px;}
+.mb15px { margin-bottom:15px;}
+.mb20px { margin-bottom:20px;}
+.mb30px { margin-bottom:30px;}
+
+.mt5px { margin-top:5px;}
+.mt10px { margin-top:10px;}
+.mt15px { margin-top:15px;}
+.mt20px { margin-top:20px;}
+
+.mr70px { margin-right:70px;}
+
+.pr10px { padding-right:10px;}
+
+.pt5px { padding-top:5px;}
+
+.boxed { clear:both; margin-bottom:10px;}
+
+/*cac colume chinh*/
+.colLeft{ float:left;width:650px;}
+
+.colRight{ float:right;width:300px;}
+
+.col01{
+	width:180px;
+}
+.col02{
+	width:460px;
+}
+.col03{
+	width:770px;
+}
+.col04{
+	width:450px;
+}

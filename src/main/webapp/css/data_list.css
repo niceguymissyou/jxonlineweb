@@ -1,0 +1,348 @@
+@charset "utf-8";
+/*============================================================
+Mr TuanPhong (info@vietstylish.net)
+Ver:12-2008
+Support: IE6, IE7, FF2, FF3, Opera 9.62, Chrome 1.0.154.36
+============================================================*/
+
+/* ======================================================================
+hien thi cac box dung chung : Header + Footer + Main + cac box dung nhieu
+========================================================================*/
+
+/*----------------------------------- 
+----------------Header -------------
+------------------------------------*/
+.hdrWrap	{ height:91px;background:url(../images/hdrWrap.html) repeat-x;}
+.hdr		{ padding-top:17px;width:960px;margin:0 auto;}
+a.logo,
+a:visited.logo { float:left;margin-right:20px; width:138px; height:32px; background:url("../images/logo.png") 0 0 no-repeat;}
+a:hover.logo {/*background:url("../images/logo.png") 0px -32px;*/}
+a.logo img { width:100%; height:100%;}
+
+
+/* Hien thi trang thai' nguoi dang nhap */
+.personal	{ float:left;color:#A0A9A5;height:22px;line-height:22px;font-size:11px;}
+.persText	{ float:left;margin-right:10px;display:block;}
+.persName { float:left;padding-left:13px;margin-right:10px;background:url(../Images/icons/icon_persName.html) no-repeat left 3px;}
+.persName span a	{ 
+	float:left;
+	padding-right:10px;
+	background:url(../Images/icons/icon_Expand.html) no-repeat right 10px;
+	text-decoration:none;
+	color:#D6DED4;
+	font-weight:bold;
+	font-size:12px;
+}
+.persName span a:hover	{ text-decoration:underline;}
+.personal .persOut		{ float:left;text-decoration:underline;color:#A0A9A5;font-size:11px;}
+.personal .persOut:hover{ text-decoration:none;}
+
+
+/* Hien thi box search thuoc header*/
+.hdr .search			{ float:right;width:245px;height:22px;line-height:22px;}
+.hdr .search .searchText{ 
+	margin-right:10px;
+	padding-right:10px;
+	background:url(../Images/icons/icon_Expand.html) no-repeat right 10px;
+	color:#D6DED4;
+	font-weight:bold;
+	float:left;
+}
+.hdr .search .searchText:hover{	text-decoration:underline;}
+.hdr .search input{
+	float:left;
+	padding:3px 0px 0px 5px;
+	width:152px;
+	height:19px;
+	background:url(../Images/searchHdrInput.html) no-repeat;
+	/*color:#CCC;*/
+	font-style:italic;
+	border:none;
+}
+
+
+/* Hien thi login thuoc header */
+.hdrBottom			{	margin-top:14px;clear:both;}
+.hdrBottom .login	{ float:right;height:26px;}
+.hdrBottom .login a	{ color:#D9E3D7;font-weight:bold;}
+.hdrBottom .login a:hover{ text-decoration:underline;}
+.hdrBottom .login span{ padding:0px 5px 0px 5px;color:#5B6C63;line-height:24px;}
+.hdrBottom .mainNavRight	{ float:right;height:26px;padding:0 7px;}
+.hdrBottom .mainNavRight a	{ color:#D9E3D7;font-weight:bold;line-height:24px;}
+.hdrBottom .mainNavRight a:hover{ text-decoration:underline;}
+.hdrBottom .mainNavRightS	{ float:right;height:26px;padding:0 7px;background:url(../images/navItemS.jpg) repeat-x !important;color:#FFF;}
+.hdrBottom .mainNavRightS a	{ color:#D9E3D7;font-weight:bold;line-height:24px;}
+.hdrBottom .mainNavRightS a:hover{ text-decoration:underline;}
+
+/* hien thi Navigation chinh' cua header */
+.mainNav	{ float:left;height:26px;margin:0;padding:0;}
+.mainNav a  { color:#D9E3D7;}
+.mainNav a:hover{ color:#D9E3D7;text-decoration:underline;}
+.mainNav .itemS	{ font-weight:bold;	background:url(../images/navItemS.jpg) repeat-x !important;color:#FFF;}
+.mainNav .itemS span { color:#FFF;}
+.mainNav .itemMore	{ 
+	float:left;
+	margin-right:5px;
+	padding-right:10px;
+	background:url(../Images/icons/icon_Expand.html) no-repeat right 10px;
+	color:#D6DED4;
+	text-decoration:none;
+}
+.mainNav .itemMore:hover{ text-decoration:underline;}
+.mainNav li{
+	float:left;
+	height:26px;
+	line-height:24px;
+	margin:0;
+	padding:0px 15px 0px 13px;
+	background:url(../Images/navSplit.html) no-repeat right;
+	list-style-type:none;
+}
+.subNav{ height:24px;line-height:24px;font-weight:normal;padding-left:10px;}
+.subNav a,
+.subNav span{ padding:0 12px 0 12px;}
+.subNav a.selected { font-weight:bold; color:#95772e;}
+.subNav a:hover,
+.subNav a.active {color:#95772e; text-decoration:underline;}
+
+
+/*Submenu for navigator, web , person:--------------------*/
+#navPlus 	{margin:26px 0px 0px -16px; width:100px;}
+#persPlus 	{margin:18px 0px 0px -1px; width:140px;}
+#webPlus 	{margin:22px 0px 0px -2px; width:100px;}
+
+/*-------------------------------------
+Hien thi menu tha xuong tu trang chu
+-------------------------------------*/
+.tt_ddmenu {
+	position:absolute; 	
+	border:1px solid #00130f;		
+	visibility:hidden;
+	z-index:99;
+}
+.tt_ddmenu a, 
+.tt_ddmenu a:visited, 
+.tt_ddmenu a:active {
+	float:none;
+	display:block; 		
+	line-height:normal;
+	padding:4px 10px;
+	/*background:#9A1A01 !important;*/
+	border-bottom:1px solid #00130f;
+	color:#CCC;
+	font-weight:normal;
+	text-decoration:none;
+	font-size:12px;
+	/*background-color:#4e5f55;*/
+}
+.tt_ddmenu a:hover {
+	color:#FFF;
+	text-decoration:none !important;
+	/*background-color:#3c4d45;*/
+	
+}
+
+
+/*----------------------------------- 
+---------------- Footer -------------
+------------------------------------*/
+.footerWrap{ clear:both;height:69px;background:url(../Images/bottomWrap.html) repeat-x;}
+.footer{ width:960px;margin:0 auto;padding-top:15px;text-align:center;}
+.footerLink{ clear:both;color:#3B5A4A;}
+.footerLink a{ font-weight:bold;}
+.footerLink span{ padding:0px 5px 0px 5px;}
+.copyRight	{ padding-top:7px;color:#545454;font-size:11px;}
+
+
+/*----------------------------------- 
+---------------- Main -------------
+------------------------------------*/
+.body{ clear:both;width:960px;margin:0 auto;padding-top:10px;}
+
+
+/*Hien thi tieu de cac' box:*/
+.boxName{ float:left;height:23px;margin-top:3px;}
+.boxName img{ float:left;margin-right:5px;display:block;}
+.boxName a,.boxName span{ float:left;line-height:27px;color:#414D4C;font-size:14px;font-weight:bold;}
+.boxName a:hover{ color:#414D4C;}
+
+
+/* ======= */
+.boxTop{ clear:both;height:30px;background:url(../Images/boxTopBg.html) repeat-x;}
+.boxTopLeft{ clear:both;height:30px;padding-left:10px;background:url(../Images/boxTopLeft.html) no-repeat;display:block;}
+.boxTopRight{ clear:both;height:30px;padding-right:10px;background:url(../Images/boxTopRight.html) no-repeat right;display:block;}
+/* ======= */
+.boxBottom{
+	clear:both;
+	height:5px;
+	line-height:5px;
+	font-size:0px;
+	background:url(../Images/boxBottom.html) repeat-x bottom;
+}
+.boxBottom span{
+	clear:both;
+	height:5px;
+	line-height:5px;
+	font-size:0px;
+	display:block;
+	background:url(../Images/boxBottomLeft.html) no-repeat bottom left;
+}
+.boxBottom b{
+	clear:both;
+	height:5px;
+	line-height:5px;
+	font-size:0px;
+	display:block;
+	background:url(../Images/boxBottomRight.html) no-repeat bottom right;
+}
+/* ======= */
+.boxBody{
+	border-left:1px solid #C2CEBF;  
+	border-right:1px solid #C2CEBF;  
+	background-color:#F5F9F0;
+}
+/* ======= */
+.boxRightContent{
+	clear:both;
+	padding:18px 10px 12px 10px;
+}
+/* ======= */
+.tab{ height:25px;padding:5px 0px 0px 0px;}
+.tabItem{ float:left;display:block;height:25px;margin-right:2px;background:url(../Images/tabItem.html) repeat-x;}
+.tabItem span{
+	float:left;
+	display:block;
+	height:25px;
+	padding:0px 0px 0px 20px;
+	background:url(../Images/tabItemLeft.html) no-repeat top left;
+}
+.tabItem a{
+	float:left;
+	display:block;
+	height:25px;
+	line-height:25px;
+	padding:0px 20px 0px 0px;
+	background:url(../Images/tabItemRight.html) no-repeat top right;
+	color:#5D7B6C;
+	font-weight:bold;
+}
+.tabItem a:hover{ color:#5D7B6C;}
+.tabItemS{ float:left;display:block;height:25px;margin-right:2px;background:url(../Images/tabItemS.html) repeat-x;}
+.tabItemS span{
+	float:left;
+	display:block;
+	height:25px;
+	padding:0px 0px 0px 20px;
+	background:url(../Images/tabItemSLeft.html) no-repeat top left;
+}
+.tabItemS a{
+	float:left;
+	display:block;
+	height:25px;
+	line-height:25px;
+	padding:0px 20px 0px 0px;
+	background:url(../Images/tabItemSRight.html) no-repeat top right;
+	color:#3B5A4A;
+	font-weight:bold;
+}
+.tabItemS a:hover{ color:#5D7B6C;}
+/* ======= */
+.pageViewWrap{
+	/*background:#E9EEE3;*/
+	padding:8px 0 8px 0;
+	clear:both;
+}
+.pageViewWrap .count{text-align:center;color:#656565;line-height:25px;}
+.pageView{
+	font-weight:bold;
+}
+.pageView a{
+	height:20px;
+	line-height:20px;
+	color:#553730;
+	border:1px solid #E7DDBF;
+	padding:2px 5px 2px 5px;
+	background:#FFF;
+}
+.pageView a:hover{
+	height:20px;
+	color:#FFF;
+	background:#0B5A2E;
+}
+.pageView .itemS{
+	height:20px;
+	line-height:20px;
+	color:#FFF;
+	background:#0B5A2E;
+	border:1px solid #3B4949;
+	padding:2px 5px 2px 5px;
+}
+.pageView span{
+	height:20px;
+	padding:9px 5px 0px 5px;
+}
+/* ======= */
+.menu{
+	padding:8px 0 0 12px;
+}
+.menu .item-lv01{
+	display:block;
+	padding:7px 0px 7px 19px;
+	background:url(../Images/icons/bullet_menuItemLv01.html) no-repeat left 8px;
+	font-weight:bold;
+}
+.menu .item-lv02{
+	display:block;
+	padding:4px 0px 4px 10px;
+	background:url(../Images/icons/bullet_Blog.html) no-repeat left 9px;
+}
+.menu .item-lv03{
+	display:block;
+	padding:3px 0px 3px 8px;
+	background:url(../Images/icons/bullet_menuItemLv03.html) no-repeat left 10px;
+}
+.menu .indent{
+	padding-left:10px;
+}
+
+
+
+/*Hien thi cac nut:*/
+.buttonUp	{ float:left;display:block;height:17px;margin-right:3px;background:url(../Images/buttons/buttonUp.html) repeat-x;}
+.buttonUp span{ 
+	float:left;
+	display:block;
+	height:17px;
+	padding-left:10px;
+	background:url(../Images/buttons/buttonUpLeft.html) no-repeat;
+}
+.buttonUp a{ 
+	float:left;
+	display:block;
+	height:17px;
+	line-height:17px;
+	padding-right:10px;
+	background:url(../Images/buttons/buttonUpRight.html) no-repeat right;
+	color:#F1F4E3;
+}
+.buttonUp a:hover{
+	color:#000;
+}
+.buttonNext{ float:left;display:block;height:17px;background:url(../Images/buttons/buttonNext.html) repeat-x;}
+.buttonNext span{
+	float:left;
+	display:block;
+	height:17px;
+	padding-left:10px;
+	background:url(../Images/buttons/buttonNextLeft.html) no-repeat;
+}
+.buttonNext a{
+	float:left;
+	display:block;
+	height:17px;
+	line-height:17px;
+	padding-right:20px;
+	background:url(../Images/buttons/buttonNextRight.html) no-repeat right;
+	color:#3B4A4A;
+}
+.buttonNext a:hover{color:#FFF;}
