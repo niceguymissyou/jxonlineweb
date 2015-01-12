@@ -17,4 +17,18 @@
           p:prefix="/WEB-INF/views/"
           p:suffix=".jsp" />
     <mvc:resources mapping="/resource/**" location="/resource/" />
+    <bean id="dataSourceMysql"  
+             class="org.springframework.jdbc.datasource.DriverManagerDataSource">  
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />  
+        <property name="url" value="jdbc:mysql://localhost:3306/webjxonline?characterEncoding=UTF-8" />  
+        <property name="username" value="root" />  
+        <property name="password" value="account_tong"/>   
+    </bean>
+    <bean id="dataSource"  
+        class="org.springframework.jdbc.datasource.DriverManagerDataSource">  
+        <property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />  
+        <property name="url" value="jdbc:sqlserver://192.168.200.128;databaseName=account_tong" />  
+        <property name="username" value="sa" />  
+        <property name="password" value="account_tong" />   
+   </bean>
 </beans>
