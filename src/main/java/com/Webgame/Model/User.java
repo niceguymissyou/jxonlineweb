@@ -216,8 +216,8 @@ public class User {
     @Autowired
     static DataSource dataSourceMysql;
     
-    @Autowired
-    static DataSource dataSource;
+    //@Autowired
+   // static DataSource dataSource;
     public static class UsersRowMapper implements RowMapper {
 
         public Object mapRow(ResultSet resultSet, int rowNum) throws SQLException {
@@ -241,7 +241,8 @@ public class User {
     
     public static int CountUserOnline() {
         String sql = "select count(*) from Account_Info where iClientID = 1";
-        JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-        return jdbcTemplate.queryForInt(sql);
+       // JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+       // return jdbcTemplate.queryForInt(sql);
+        return 0;
     }
 }

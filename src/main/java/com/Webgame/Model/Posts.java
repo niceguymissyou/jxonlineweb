@@ -14,7 +14,9 @@ import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
 
 /**
@@ -129,88 +131,5 @@ public class Posts {
      */
     public void setPreview(String preview) {
         this.preview = preview;
-    }
-    
-    @Autowired
-    static DataSource dataSourceMysql;
-    public static class PostsRowMapper implements RowMapper {
-
-        public Object mapRow(ResultSet resultSet, int rowNum) throws SQLException {
-            Posts post = new Posts();
-            post.setPost_link(resultSet.getString("post_link"));
-            post.setPost_text(resultSet.getString("post_text"));
-            post.setPost_subject(resultSet.getString("post_subject"));
-            post.setPost_type(resultSet.getString("post_type"));
-            post.setPost_time(resultSet.getTimestamp("post_time"));
-            
-            return post;
-        }
-
-    }
-     public static class SlideRowMapper implements RowMapper {
-
-        public Object mapRow(ResultSet resultSet, int rowNum) throws SQLException {
-            Slide slide = new Slide();
-            slide.setSlide_link(resultSet.getString("slide_link"));
-            slide.setSlide_img(resultSet.getString("slide_img"));
-            return slide;
-        }
-
-    }
-    public  boolean insert(){
-        try{
-            String sql = "insert into posts(post_link,post_subject,post_text,post_time,post_type)   values(?,?,?,?,?)";
-            JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSourceMysql);
-            jdbcTemplate.update(sql, new Object[]{this.getPost_link(),
-                this.getPost_subject(),
-                this.getPost_text(),
-                new java.util.Date(),
-                this.getPost_type()});
-            return true;
-        } catch (Exception ex){
-            return false;
-        }
-    }
-    public void editData() {
-        String sql = "update posts set post_subject = ?, post_text = ?, post_time = ?,post_type = ? where post_link = ?";
-        JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSourceMysql);
-        jdbcTemplate.update(sql, new Object[]{
-            this.getPost_subject(),
-            this.getPost_text(),
-            new java.util.Date(),
-            this.getPost_type(),
-            this.getPost_link()});
-    }
-    public void delete() {
-        String sql = "delete from posts where post_link = ?";
-        JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSourceMysql);
-        jdbcTemplate.update(sql, new Object[]{this.Post_link});
-    }
-    public static Posts getData(String post_link) {
-        String sql = "select * from posts where post_link = ?";
-        JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSourceMysql);
-        List<Posts> postList = jdbcTemplate.query(sql, new Object[]{post_link}, new PostsRowMapper());
-        if (postList.size() != 1) {
-            return null;
-        }
-        return postList.get(0);
-    }
-    public static List<Posts> getList(int from, int to, String type) {
-        String sql = "select * from posts where post_type = ?  order by post_time desc limit ?,?";
-        JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSourceMysql);
-        List postList = jdbcTemplate.query(sql, new Object[]{type, from, to}, new PostsRowMapper());
-        return postList;
-    }
-    public static List<Posts> getList(int from, int to) {
-        String sql = "select * from posts order by post_time desc limit ?,?";
-        JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSourceMysql);
-        List postList = jdbcTemplate.query(sql, new Object[]{from, to}, new PostsRowMapper());
-        return postList;
-    }
-    public static List<Slide> getListSlide() {
-        String sql = "select * from slide  limit 0,6";
-        JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSourceMysql);
-        List lstSlide = jdbcTemplate.query(sql, new SlideRowMapper());
-        return lstSlide;
     }
 }
