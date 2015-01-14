@@ -25,8 +25,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
-
 import com.Webgame.Model.*;
+import com.Webgame.Service.PostsService;
 import org.springframework.stereotype.Controller;
 
 /**
@@ -77,6 +77,8 @@ public class AdminController {
     public static List<Slide> getLstSlide() {
         return lstSlide;
     }
+    @Autowired
+    PostsService postsService;
     @RequestMapping(method = RequestMethod.GET)
     public ModelAndView index(HttpServletRequest request, HttpServletResponse response) {
 
@@ -84,8 +86,7 @@ public class AdminController {
         modelAndView.setViewName("Admin/index");
         modelAndView.addObject("page", "content-right.jsp");
         modelAndView.addObject("post", new Posts());
-        modelAndView.addObject("lstpost", Posts.getList(0, 5));
-
+        modelAndView.addObject("lstpost", postsService.getList(0, 5));
         return modelAndView;
     }
     @RequestMapping(value = "/post", method = RequestMethod.POST)
@@ -109,9 +110,9 @@ public class AdminController {
             return modelAndView;
         }
 
-        if (post.insert()) {
+        if (postsService.insert(post)) {
             //post.setPost_text("Đăng bài không thành công");
-            post.editData();
+            postsService.editData(post);
             for (int i = 0; i < posts.size(); i++) {
 
                 if (posts.get(i).getPost_link().equals(post.getPost_link())) {
@@ -173,7 +174,7 @@ public class AdminController {
         }
         Posts post = new Posts();
         post.setPost_link(Post_link);
-        post.delete();
+        postsService.delete(post);
         return str;
     }
 
@@ -196,7 +197,7 @@ public class AdminController {
                 if (str1.equals("up")) {
                     if (i >= getPosts().size() - 1) {
                         Posts post = new Posts();
-                        post = post.getData(str);
+                        post = postsService.getData(str);
                         posts.set(getPosts().size() - 1, post);
                         return "true";
                     }
@@ -229,7 +230,7 @@ public class AdminController {
                 if (str1.equals("up")) {
                     if (i >= getPostsSuKien().size() - 1) {
                         Posts post = new Posts();
-                        post = Posts.getData(str);
+                        post = postsService.getData(str);
                         postsSuKien.set(getPostsSuKien().size() - 1, post);
                         return "true";
                     }
@@ -261,7 +262,7 @@ public class AdminController {
                 if (str1.equals("up")) {
                     if (i >= getPostsTinhNang().size() - 1) {
                         Posts post = new Posts();
-                        post = Posts.getData(str);
+                        post = postsService.getData(str);
                         postsTinhNang.set(getPostsTinhNang().size() - 1, post);
                         return "true";
                     }
@@ -293,7 +294,7 @@ public class AdminController {
                 if (str1.equals("up")) {
                     if (i >= getPostsCamNang().size() - 1) {
                         Posts post = new Posts();
-                        post = Posts.getData(str);
+                        post = postsService.getData(str);
                         postsCamNang.set(getPosts().size() - 1, post);
                         return "true";
                     }
@@ -328,11 +329,11 @@ public class AdminController {
         modelAndView.addObject("page", "content-right-post.jsp");
 
         //load to memmory
-        posts = Posts.getList(0, 15, "1");
-        postsSuKien = Posts.getList(0, 15, "2");
-        postsTinhNang = Posts.getList(0, 15, "3");
-        postsCamNang = Posts.getList(0, 15, "4");
-        lstSlide = Posts.getListSlide();
+        posts = postsService.getList(0, 15, "1");
+        postsSuKien = postsService.getList(0, 15, "2");
+        postsTinhNang = postsService.getList(0, 15, "3");
+        postsCamNang = postsService.getList(0, 15, "4");
+        lstSlide = postsService.getListSlide();
        // List<Posts> sublist = posts.subList(0, 10);
         // modelAndView.addObject("lstPost",sublist);
         modelAndView.addObject("post_type", str);
@@ -346,7 +347,7 @@ public class AdminController {
         modelAndView.setViewName("Admin/index");
         modelAndView.addObject("page", "content-right.jsp");
         Posts post = new Posts();
-        post = Posts.getData(Post_link);
+        post = postsService.getData(Post_link);
         modelAndView.addObject("post", post);
 
         return modelAndView;
