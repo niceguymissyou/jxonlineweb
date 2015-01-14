@@ -1,34 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:p="http://www.springframework.org/schema/p"
-        xmlns:mvc="http://www.springframework.org/schema/mvc"
-	xmlns:context="http://www.springframework.org/schema/context"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans
-		http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
 		http://www.springframework.org/schema/context
-		http://www.springframework.org/schema/context/spring-context-4.1.xsd
-                http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd">
+		http://www.springframework.org/schema/context/spring-context-4.0.xsd
+                http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
     <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
     <context:component-scan base-package="com.Webgame.Controller"></context:component-scan>
     <mvc:annotation-driven />
+    
     <bean id="viewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver"
           p:prefix="/WEB-INF/views/"
-          p:suffix=".jsp" />
-    <mvc:resources mapping="/resource/**" location="/resource/" />
+          p:suffix=".jsp" />  
+  
+    <context:annotation-config />
+          
+
     <bean id="dataSourceMysql"  
-             class="org.springframework.jdbc.datasource.DriverManagerDataSource">  
-        <property name="driverClassName" value="com.mysql.jdbc.Driver" />  
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource">  
+        <property name="DriverClassName" value="com.mysql.jdbc.Driver" />  
         <property name="url" value="jdbc:mysql://localhost:3306/webjxonline?characterEncoding=UTF-8" />  
         <property name="username" value="root" />  
         <property name="password" value="account_tong"/>   
     </bean>
-    <bean id="dataSource"  
-        class="org.springframework.jdbc.datasource.DriverManagerDataSource">  
-        <property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />  
-        <property name="url" value="jdbc:sqlserver://192.168.200.128;databaseName=account_tong" />  
-        <property name="username" value="sa" />  
-        <property name="password" value="account_tong" />   
-   </bean>
+      
+    <bean id="postsService" class = "com.Webgame.Service.PostsServiceImpl"/>
 </beans>

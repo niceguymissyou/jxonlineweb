@@ -66,7 +66,7 @@
           
     }
 </script>
-<form:form method="POST" action="${pageContext.request.contextPath}/admin/post.htm" accept-charset="UTF-8" commandName = "post">
+<form:form method="POST" action="${pageContext.request.contextPath}/admin/post.html" accept-charset="UTF-8" commandName = "post">
     <span>Post link: </span>
     <br>
     <form:errors STYLE="color: #ff0000; " path="Post_link"/>
