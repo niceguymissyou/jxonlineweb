@@ -19,7 +19,7 @@
                     
                     <li><a  class="a_sk" href="<%=request.getContextPath()%>admin.htm"> <span class="iconspan"></span>Đăng bài</a> </li>
                     
-                    <li><a class="a_sk" href="<%=request.getContextPath()%>admin/postmanage.htm?post_type=1"> <span class="iconspan"></span>Quản lí bài đăng</a> </li>
+                    <li><a class="a_sk" href="<%=request.getContextPath()%>/admin/postmanage.html?post_type=1"> <span class="iconspan"></span>Quản lí bài đăng</a> </li>
                 
                     <li><a class="a_sk" href="/"> <span class="iconspan"></span>Quản lí User</a> </li>
                     
