@@ -1,0 +1,10 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 23, 2014, 4:02:31 PM
+    Author     : VuNguyen
+*/
+.flex-container a:active,.flexslider a:active{outline:none}.slides,.flex-control-nav,.flex-direction-nav{margin:0;padding:0;list-style:none}.flexslider{width:243px;margin:0px 0 0 4px;padding:0px 0 0 0;height:187px;overflow:hidden}.flexslider .slides>li{display:none}.flexslider .slides img{width:243px;height:187px;display:block}.flex-pauseplay span{text-transform:capitalize}.slides:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}html[xmlns] .slides{display:block}* html .slides{height:1%}.no-js .slides>li:first-child{display:block}.flexslider{position:relative;padding:1px 0px 0px 1px}.flexslider .slides{}.flexslider .slides>li{position:relative}.flex-container{zoom:1;position:relative}.flex-control-nav{width:100%;position:absolute;bottom:5px;text-align:right;right:10px}.flex-control-nav li{margin:0 0 0 5px;display:inline-block;zoom:1;*display: inline}.flex-control-nav li:first-child{margin:0}.flex-control-nav li a{width:16px;height:16px;display:block;background:url(http://static1.hoiucmotthoi.com/static/images/images/iconweb.png.pagespeed.ce.WMxVbwLIVZ.png) no-repeat -2px -58px;cursor:pointer;text-indent:0px;position:relative;text-align:center;color:#fff;font-size:11px;font-weight:bold;line-height:16px}.flex-control-nav li a:hover,.flex-control-nav li a.active{background:url(http://static1.hoiucmotthoi.com/static/images/images/iconweb.png.pagespeed.ce.WMxVbwLIVZ.png) no-repeat -2px -36px}.warp_laucher .flexslider{margin:0px 0 0 0px}

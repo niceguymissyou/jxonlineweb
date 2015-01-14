@@ -1,0 +1,124 @@
+
+#mask {
+	display: none;
+	background: url(../images/images/bg_opaci.png);
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100%;
+	z-index: 999;
+	width: 100%;
+}
+
+/* You can customize to your needs  */
+.login-popup1{
+	display: none;
+	float: left;
+	font-size: 14px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 9999;
+	/*-webkit-border-radius: 3px; /* Safari, Chrome */ 
+	border: 4px solid #626262;
+	background: white;
+	max-width: 100%;
+	width:500px;
+}
+#warp_poup {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	background: url(../images/images/bg_opaci.png);
+}
+
+/* You can customize to your needs  */
+.login-popup{
+	font-size:12px;
+	background: white;
+	margin:0px auto;
+	position:relative;
+	top:30%;
+	z-index: 99999;
+	/*-webkit-border-radius: 3px; /* Safari, Chrome */
+	width: 600px;
+	border: 4px solid #d2d2d2;
+}
+
+.text_pop{
+	width:96%;
+	margin: 0px auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+	line-height: 25px;
+}
+.warp_bt{
+	width:37%;
+	 margin: 0px auto;
+	 margin-bottom: 25px;
+}
+/********************  huong dan ****************/
+.warp_hd{
+	width:100%;
+	margin: 0px auto;
+	margin-top: 10px;
+	 display: table;
+}
+.line_dk{
+	border: none;
+	background: url(../images/images/icon_cri.png) 0px 5px no-repeat;
+}
+.line_dk a{
+	font-weight: bold;
+	color: #00b6e8;
+}
+.line_dk a:hover{
+	text-decoration: none;
+	color: #007797;
+}
+.h4_lable{
+	margin: 0px;
+	padding: 8px 0px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 16px;
+	color: black;
+	font-weight: bold;
+}
+.h5_lable{
+	font-size: 12px;
+	font-weight: bold;
+	color: #393939;
+	margin: 0px;
+	padding: 2px 0px;
+	
+}
+.span_dk{
+	display: block;
+	line-height: 22px;
+	color: #1f1f1f;
+	margin: 4px 0px;
+}
+.span_dk span{
+	margin-left: 13px;
+}
+.span_dk span{
+	margin-left: 20px;
+	display: block;
+}
+#a_up{
+	position: fixed;
+	bottom:0px;
+	background: url(../images/images/icon_top.png) top right no-repeat;
+	width:39px;
+	height:41px;
+	z-index: 900;
+	margin: 0px auto;
+	right:0px;
+	
+}
+
