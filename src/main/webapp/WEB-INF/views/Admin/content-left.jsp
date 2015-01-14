@@ -44,7 +44,7 @@
                     <ol class="flex-control-nav">
                                            
                     </ol>
-                </div>>        
+                </div>        
             </div>
         </div>
     </div>
