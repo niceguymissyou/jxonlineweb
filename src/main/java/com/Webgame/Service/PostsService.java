@@ -5,10 +5,28 @@
  */
 package com.Webgame.Service;
 
+import com.Webgame.Model.Posts;
+import com.Webgame.Model.Slide;
+import java.util.List;
+
 /**
  *
  * @author VuNguyen
  */
-public class PostsService {
+public interface PostsService {
     
+    public boolean insert(Posts post);
+
+    public void editData(Posts post);
+
+    public void delete(Posts post);
+
+    public Posts getData(String post_link);
+
+    public List<Posts> getList(int from, int to, String type);
+
+    public List<Posts> getList(int from, int to);
+
+    public List<Slide> getListSlide();
+
 }
