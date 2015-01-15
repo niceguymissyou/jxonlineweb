@@ -33,9 +33,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
 <meta name="description" content="Võ hiệp truyền kỳ - game online nhập vai xứng tầm chinh đồ webgame" />
 <meta name="keywords" content="chinh đồ, chinh do, chinh đồ web 2012, Võ hiệp, vo hiep Webgame, game nhập vai, game online" />  
-<meta name="verify-v1" content="GRBRcIl8Tu+x9ZTz/IV6uMVkMpd1hv1yJO3Gj5pKo00=" />
 <meta name="author" content="Võ Hiệp Team" />
-<meta name="google-site-verification" content="0PWuylriAvOHGi2w6jQmoDISd-4KfANkV-OvgwToHho" />        
 
 
 <style >
@@ -45,19 +43,6 @@
 }
 </style>
 
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-32782484-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
 <script type="text/javascript">
 
  
@@ -102,15 +87,15 @@
             <div id="menu"> 
             	<a href="/" class="btn-lg-c">Võ Lâm Truyền Kỳ - Thập Đại Phái</a> 
             	<a href="" class="btn-home">Trang chủ</a> 
-            	<a href="http://support.vohiep.com/" target="_blank" class="btn-hd">Tân thủ</a> 
-            	<a href="news/list/1/tin-tuc.html" class="btn-tt">Tin tức</a> 
-            	<a href="news/list/2/cam-nang.html" class="btn-cn">Cẩm nang</a>
-            	<a href="http://bank.vohiep.com/exchange/vhtk" class="btn-nt">Nạp tiền</a>
+            	<a href="ho-tro-vo-lam-thap-dai-phai.html" target="_blank" class="btn-hd">Tân thủ</a> 
+            	<a href="tin-tuc-lst.html" class="btn-tt">Tin tức</a> 
+            	<a href="cam-nang-lst.html" class="btn-cn">Cẩm nang</a>
+            	<a href="tai-khoan/nap-tien.html" class="btn-nt">Nạp tiền</a>
             	 
 <!--            	<a href="#" class="btn-nt">Nạp tiền</a> -->
             	<a href="" class="btn-dd">Diễn đàn</a> </div>
         </div>
-        <div class="btn-play"><a href="server">
+        <div class="btn-play">
             <object width="100%" height="100%" codebase=" http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
                 <param value="http://webpic.my4399.com/mccq/img/top.swf" name="movie">
                 <param value="high" name="quality">
@@ -119,7 +104,7 @@
                 <param value="false" name="allowFullScreen">
                 <embed width="100%" height="100%" allowfullscreen="false" wmode="transparent" scale="noborder" type="application/x-shockwave-flash" pluginspage=" http://www.macromedia.com/go/getflashplayer" quality="high" src="flash/top.swf">
             </object>
-        </a></div>
+        </div>
        <div class="flag" style="height: 370px;
     opacity: 1;
     overflow: hidden;
@@ -183,7 +168,7 @@
                  <label style="color:#fffb96;cursor:pointer" for="saveme">Ghi nhớ thông tin</label></td>
          </tr>
          <tr>
-             <td align="center"><a href="user/register.html"><img style="margin:9px 0" src="images/buttons/btn-sigup.png" alt="Đăng ký" height="36" width="112"></a></td>
+             <td align="center"><a href="tai-khoan/dang-ky.html"><img style="margin:9px 0" src="images/buttons/btn-sigup.png" alt="Đăng ký" height="36" width="112"></a></td>
          </tr>
       </table>
    </form>
@@ -256,7 +241,7 @@ $(function() {
         
        
         
-        <div class="adv-200x75"> <a href="http://forum.vohiep.com/forumdisplay.php?f=3"><img src="images/btn-left-big2.jpg" alt="" /></a> </div>
+        <div class="adv-200x75"> <a href=""><img src="images/btn-left-big2.jpg" alt="" /></a> </div>
         <div class="clear"></div>
         <div class="adv-200x75" style="padding: 5px;width:inherit;float:none"> 
         
@@ -273,13 +258,16 @@ $(function() {
                     <div id="tab-noibat">
                         <div id="slides">
                             <div class="slides_container">
-                            	   
+                                           <!--
                             		<div class="slide"><a href="http://vohiep.com/news/view/175/Nap-Vxu-bang-the-ATM-noi-dia-the-tin-dung-quoc-te-Sieu-Loi-Nhuan.html"><img src="upload/files/2014/12/20/11/2007539/1598956158_vh_kmatm.jpg" alt="Chinh đồ web 2012"></a></div>
                             	   
                             		<div class="slide"><a href="news/view/640/Dac-Quyen-Vip-Ton-Quy-tren-cong-game-vohiep-com.html"><img src="upload/files/2014/3/13/17/2007539/1201666819_vohiep-vip-conggame.jpg" alt="Chinh đồ web 2012"></a></div>
                             	   
                             		<div class="slide"><a href="news/view/637/Khuyen-Mai-Vxu-Khi-Chuyen-Khoan-Ngan-Hang-Hoac-Nap-Tien-Truc-Tiep.html"><img src="upload/files/2014/3/4/12/2007539/1438778979_gh_km.jpg" alt="Chinh đồ web 2012"></a></div>
-                            	                            	
+                            	            -->   
+                                          <div class="slide"><a href="http://vohiep.com/news/view/175/Nap-Vxu-bang-the-ATM-noi-dia-the-tin-dung-quoc-te-Sieu-Loi-Nhuan.html"><img src="images/slide/openbeta.jpg" alt="Chinh đồ web 2012"></a></div>
+                                        <div class="slide"><a href="http://vohiep.com/news/view/175/Nap-Vxu-bang-the-ATM-noi-dia-the-tin-dung-quoc-te-Sieu-Loi-Nhuan.html"><img src="images/slide/huyenthoaictc.jpg" alt="Chinh đồ web 2012"></a></div>
+                                        <div class="slide"><a href="http://vohiep.com/news/view/175/Nap-Vxu-bang-the-ATM-noi-dia-the-tin-dung-quoc-te-Sieu-Loi-Nhuan.html"><img src="images/slide/tho.jpg" alt="Chinh đồ web 2012"></a></div>
                             </div>
                         </div>
                     </div>
@@ -361,26 +349,26 @@ $(function() {
                         <div class="bot"></div>
                     </div>
                     <div class="tese">
-                        <p><a href="#" target="_blank"><img width="438" height="105" border="0" src="images/banner-mid-big-438x105.jpg" alt="Chinh đồ web 2012"></a></p>
+                        <p><a href="#" target="_blank"><img width="438" height="105" border="0" src="images/banner-mid-big.jpg" alt="Chinh đồ web 2012"></a></p>
                     </div>
                 </div>
                 <div class="main-right">
                 	<!-- Truyen ki tri lo -->
                     <div id="noibat">
-                    	  <div class="tkcl-tit"><a href="news/list/20/truyen-ki-tri-lo.html">Truyền kỳ chi lộ</a></div>
+                    	  <div class="tkcl-tit"></div>
                                         	<div class="licheng">
-                            <div class="lianjie"><a href="news/view/477/Phien-Ban-My-Nhan-Danh-Tuong.html" target="_blank"><img width="105" height="70" border="0" src="upload/files/2013/5/22/11/2007539/414924465_3_thumb.png" alt="Chinh đồ web 2012">&nbsp;</a></div>
+                            <div class="lianjie"><a href="tai-khoan/dang-ky.html" target="_blank"><img width="105" height="70" border="0" src="upload/files/2013/5/22/11/2007539/414924465_3_thumb.png" alt="Võ lâm thập đại phái">&nbsp;</a></div>
                             <div class="licheng_cent">
-                                <h1 title="Chinh đồ web 2012"><a href="news/view/477/Phien-Ban-My-Nhan-Danh-Tuong.html" class="text-elip"><font size="2" color="#ff00ff">Phiên Bản Mỹ Nhân Danh Tướng</font></a></h1>
-                                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="news/view/477/Phien-Ban-My-Nhan-Danh-Tuong.html" target="_blank"><font color="#000000">Phiên Bản Mỹ Nhân Danh Tướng với vô vàn tính năng mới hấp dẫn bao gồm phụ bản mới , hệ thống đồ giám và giao diện dung luyện, tẩy luyện trang bị vật cưỡi</font></a></p>
+                                <h1 title="Võ lâm thập đái phái"><a href="tai-khoan/dang-ky.html" class="text-elip"><font size="2" color="#ff00ff">Phiên Bản Công Thành Chiên</font></a></h1>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="tai-khoan/dang-ky.html" target="_blank"><font color="#000000">Phiên Bản Công Thành Chiến  với vô vàn tính năng mới hấp dẫn , tẩy luyện trang bị vật cưỡi</font></a></p>
                                 <p>&nbsp;</p>
                             </div>
                         </div>
                                         	<div class="licheng">
-                            <div class="lianjie"><a href="news/view/84/Huong-dan-nap-nguyen-bao-trong-Vo-Hiep-Truyen-Ky.html" target="_blank"><img width="105" height="70" border="0" src="upload/files/2012/6/13/20/2007539/797541615_12_thumb.png" alt="Chinh đồ web 2012">&nbsp;</a></div>
+                            <div class="lianjie"><a href="Huong-dan-nap-the-trong-Vo-Lam-Thap-Dai-Phai.html" target="_blank"><img width="105" height="70" border="0" src="upload/files/2012/6/13/20/2007539/797541615_12_thumb.png" alt="Võ lâm thập đái phái">&nbsp;</a></div>
                             <div class="licheng_cent">
-                                <h1 title="Chinh đồ web 2012"><a href="news/view/84/Huong-dan-nap-nguyen-bao-trong-Vo-Hiep-Truyen-Ky.html" class="text-elip"><font size="2" color="#ff00ff">Hướng dẫn nạp nguyên bảo trong Võ Hiệp Truyền Kỳ</font></a></h1>
-                                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="news/view/84/Huong-dan-nap-nguyen-bao-trong-Vo-Hiep-Truyen-Ky.html" target="_blank"><font color="#000000">Để nạp Nguyên Bảo vào tài khoản chơi Võ Hiệp Truyền Kỳ, chỉ cần chuyển Tcoin sang Nguyên Bảo trong Game. Vậy nạp Tcoin bằng cách nào? Sau đây chúng ta sẽ rõ</font></a></p>
+                                <h1 title="Võ lâm thập đái phái"><a href="/Huong-dan-nap-the-trong-Vo-Lam-Thap-Dai-Phai.html" class="text-elip"><font size="2" color="#ff00ff">Hướng dẫn nạp thẻ trong Võ Lâm Thập Đại Phái</font></a></h1>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/Huong-dan-nap-the-trong-Vo-Lam-Thap-Dai-Phai.html" target="_blank"><font color="#000000">Để nạp xu vào tài khoản chơi Võ Lâm Thập Đại Phái, chỉ cần vài bước sau đây sẽ rõ</font></a></p>
                                 <p>&nbsp;</p>
                             </div>
                         </div>
@@ -478,26 +466,7 @@ $(function() {
                     <div class="gal-head"></div>
                     <div class="gal-mid">
                         <div class="new">
-                            <div class="event-content-long" id="content-tabs" style="font-family:Arial, Helvetica, sans-serif">
-                                <ul class="tab-inside">
-                                    <li><a href="#tabs-61"><input type="button" name="Hình ảnh" value="Hình ảnh"/></a></li>
-                                    <li><a href="#tabs-62"><input type="button" name="Thành viên" value="Thành viên"/></a></li>
-                                    <div class="clear"></div>
-                                </ul>
-                                <div style="display: block;" id="tabs-61" class="bg-content-1 box-photo1">
-                                <script>
-                                $(function() {
-                                    $("a#fancybox").fancybox();
-                                });
-                                </script>
-                                    <ul>
-                                    	                                                                            </ul>
-                                </div>
-                                <div style="display: block;" id="tabs-62" class="bg-content-1 box-photo1">
-                                    <ul>
-                                                                            </ul>
-                                </div>
-                            </div>
+                            <iframe frameborder="1" style="border: medium none; overflow: hidden; height: 265px; width: 370px;background:#fff;" scrolling="no" src="http://www.facebook.com/plugins/likebox.php?href=https://www.facebook.com/volamkyhiep2014?fref=ts;width=370&amp;colorscheme=light&amp;show_faces=true&amp;connections=9&amp;stream=false&amp;header=false&amp;height=265" id="demo"></iframe>
                         </div>
                     </div>
                     <div class="gal-bot"></div>
@@ -526,6 +495,8 @@ $(function() {
                                 <div style="display: block;" id="tabs-11" class="bg-content-1 box-rank1">
                                     <ul>
                                         <div class="header-tab"><span style="padding-right:25px;" class="info">Level</span><span style="padding-right:55px;" class="server">Server</span><span class="name">Nhân vật</span></div>
+
+                                        <!--
                                                                                 <li><span class="info"><font color="#FF0000">120</font></span><span class="server">2-Võ Kiếm</span><span class="name">viethung669</span></li>
                                                                                 <li><span class="info"><font color="#FF0000">120</font></span><span class="server">2-Võ Kiếm</span><span class="name">GaoĐỏ</span></li>
                                                                                 <li><span class="info"><font color="#FF0000">120</font></span><span class="server">4-Võ Giới</span><span class="name">ALLSTART</span></li>
@@ -534,7 +505,8 @@ $(function() {
                                                                                 <li><span class="info"><font color="#FF0000">119</font></span><span class="server">1-Võ Lâm</span><span class="name">TiểuTiênNữ</span></li>
                                                                                 <li><span class="info"><font color="#FF0000">119</font></span><span class="server">1-Võ Lâm</span><span class="name">TiểuQuếTử</span></li>
                                                                                 <li><span class="info"><font color="#FF0000">119</font></span><span class="server">1-Võ Lâm</span><span class="name">MrLinh™</span></li>
-                                                                            </ul>
+                                        -->                               
+                                    </ul>
                                 </div>
                                 
                             </div>
@@ -579,6 +551,9 @@ $(function() {
     
  <!-- fancy box -->
 <script type="text/javascript" src="http://vohiep.com/popup/index"></script>
+<script type="text/javascript" >
+    $.fn.LoadPostList()
+</script>
 <!-- end fancybox --> 
 
 </body>
