@@ -26,6 +26,7 @@
 <script type="text/javascript" src="js/slides.min.jquery.js"></script>        
 <script type="text/javascript" src="js/vohiep.js"></script>   
 <script type="text/javascript" src="js/bt.modal.js"></script>   
+<script type="text/javascript" src="js/index_ex.js"></script>  
 
  
 
@@ -289,14 +290,15 @@ $(function() {
                             <div class="new">
                                 <div class="event-content-long" id="content-tabs" style="font-family:Arial, Helvetica, sans-serif">
                                     <ul class="tab-inside">
-                                        <li class="now"><a href="#tabs-1"><input type="button" name="Mới nhất" value="Mới nhất"/></a></li>
-                                        <li><a href="#tabs-2"><input type="button" name="Sự kiện" value="Sự kiện" /></a></li>
-                                        <li><a href="#tabs-4"><input type="button" name="Tin tức" value="Tin tức" /></a></li>
-                                        <li><a href="#tabs-3"><input type="button" name="Cộng đồng" value="Cộng đồng" /></a></li>
+                                       <!-- <li class="now"><a href="#tabs-1"><input type="button" name="Mới nhất" value="Mới nhất"/></a></li> -->
+                                        <li><a href="#tabs-2"><input type="button" name="Tin Tức" value="Tin Tức" /></a></li>
+                                        <li><a href="#tabs-4"><input type="button" name="Sự Kiện" value="Sự Kiện" /></a></li>
+                                        <li><a href="#tabs-3"><input type="button" name="Tính Năng" value="Tính Năng" /></a></li>
                                         <div class="clear"></div>
-                                    </ul>
-                                    
+                                    </ul>     
+                               
                                     <!-- List newest news -->
+                                    <!--
                                     <div style="display: block;" id="tabs-1" class="bg-content-1">
                                     														
 												
@@ -311,39 +313,46 @@ $(function() {
 
                                             <li><a class="type" href="news/list/12/He-thong.html">[Hệ thống]</a><a href="news/view/645/Thong-bao-Bao-tri-he-thong-ngay-22-05-2014.html">[Thông báo] Bảo trì hệ thống ngày 22/05/2014</a><span class="time">2014-05-21</span></li>
 
-                                        </ul>
-											                                    </div>
-                                    
+                                        </ul>					                                    
+                                    </div>
+                                    -->
                                     <!-- List news su kien cat 10 -->
                                     <div style="display: block;" id="tabs-2" class="bg-content-1">
                                         <ul>
+                                            <!--
                                             <li><a class="type" href="news/list/10/Su-kien.html">[Sự kiện]</a><a href="news/view/651/Thong-bao-bao-tri-dot-xuat-ngay-23-9-2014.html">Thông báo bảo trì đột xuất ngày 23/9/2014</a><span class="time">2014-09-23</span></li>
                                             <li><a class="type" href="news/list/12/He-thong.html">[Hệ thống]</a><a href="news/view/649/Thong-bao-bao-tri-server-1019-2012.html">Thông báo bảo trì server 1019 ( 2012 )</a><span class="time">2014-08-28</span></li>
                                             <li><a class="type" href="news/list/12/He-thong.html">[Hệ thống]</a><a href="news/view/648/Thong-bao-bao-tri-he-thong-dang-nhap-sang-ngay-21-08.html">Thông báo bảo trì hệ thống đăng nhập sáng ngày 21/08</a><span class="time">2014-08-20</span></li>
                                             <li><a class="type" href="news/list/11/Cong-dong.html">[Cộng đồng]</a><a href="news/view/646/Su-Kien-World-Cup-Tay-Ban-Nha-Ha-Lan-02h00-ngay-14-6-2014.html">Sự Kiện World Cup : Tây Ban Nha - Hà Lan ( 02h00, ngày 14/6/2014 )</a><span class="time">2014-06-13</span></li>
                                             <li><a class="type" href="news/list/12/He-thong.html">[Hệ thống]</a><a href="news/view/645/Thong-bao-Bao-tri-he-thong-ngay-22-05-2014.html">[Thông báo] Bảo trì hệ thống ngày 22/05/2014</a><span class="time">2014-05-21</span></li>
+                                        
+                                            -->
                                         </ul>
                                     </div>
                                     
                                     <!-- List news he thong cat 12 -->
                                     <div style="display: block;" id="tabs-4" class="bg-content-1">
                                         <ul>
+                                            <!--
                                             <li><a class="type" href="news/list/12/He-thong.html">[Hệ thống]</a><a href="news/view/649/Thong-bao-bao-tri-server-1019-2012.html">Thông báo bảo trì server 1019 ( 2012 )</a><span class="time">2014-08-28</span></li>
                                             <li><a class="type" href="news/list/12/He-thong.html">[Hệ thống]</a><a href="news/view/648/Thong-bao-bao-tri-he-thong-dang-nhap-sang-ngay-21-08.html">Thông báo bảo trì hệ thống đăng nhập sáng ngày 21/08</a><span class="time">2014-08-20</span></li>
                                             <li><a class="type" href="news/list/12/He-thong.html">[Hệ thống]</a><a href="news/view/645/Thong-bao-Bao-tri-he-thong-ngay-22-05-2014.html">[Thông báo] Bảo trì hệ thống ngày 22/05/2014</a><span class="time">2014-05-21</span></li>
                                             <li><a class="type" href="news/list/12/He-thong.html">[Hệ thống]</a><a href="news/view/642/Thong-bao-bao-tri-dot-xuat-server-VH-2014-Ngay-09-04.html">Thông báo bảo trì đột xuất server VH 2014 Ngày 09/04</a><span class="time">2014-04-09</span></li>
                                             <li><a class="type" href="news/list/12/He-thong.html">[Hệ thống]</a><a href="news/view/638/Thong-bao-Bao-tri-he-thong-ngay-06-03-2014.html">[Thông báo] Bảo trì hệ thống ngày 06/03/2014</a><span class="time">2014-03-05</span></li>
+                                            -->
                                         </ul>
                                     </div>
 									
                                     <!-- List news cong dong cat 11 -->
                                     <div style="display: block;" id="tabs-3" class="bg-content-1">
                                         <ul>
+                                            <!--
                                             <li><a class="type" href="news/list/11/Cong-dong.html">[Cộng đồng]</a><a href="news/view/641/Lien-Minh-Tank-chinh-thuc-Open-Beta-vao-10h-ngay-20-03.html">Liên Minh Tank chính thức Open Beta vào 10h ngày 20/03</a><span class="time">2014-03-21</span></li>
                                             <li><a class="type" href="news/list/11/Cong-dong.html">[Cộng đồng]</a><a href="news/view/636/Ket-thuc-Alpha-Test-thanh-cong-Hen-gap-lai-tai-ban-chinh-thuc.html">Kết thúc Alpha Test thành công - Hẹn gặp lại tại bản chính thức</a><span class="time">2014-02-14</span></li>
                                             <li><a class="type" href="news/list/11/Cong-dong.html">[Cộng đồng]</a><a href="news/view/635/Tank-Tank-chinh-thuc-ra-mat-sau-24-nam-ap-u.html">Tank Tank chính thức ra mắt sau 24 năm ấp ủ</a><span class="time">2014-02-11</span></li>
                                             <li><a class="type" href="news/list/11/Cong-dong.html">[Cộng đồng]</a><a href="news/view/634/24-nam-1-giac-mo-Tinh-cha-sau-tham.html">24 năm 1 giấc mơ – Tình cha sâu thẳm</a><span class="time">2014-01-28</span></li>
                                             <li><a class="type" href="news/list/11/Cong-dong.html">[Cộng đồng]</a><a href="news/view/619/Su-kien-Du-doan-ket-qua-Man-Utd-Arsenal.html">[ Sự kiện Dự đoán kết quả ] Man Utd Arsenal</a><span class="time">2013-11-09</span></li>
+                                            -->
                                         </ul>
                                     </div>
                                 </div>
@@ -415,23 +424,26 @@ $(function() {
                         	<div class="new">
                                 <div class="event-content-long" id="content-tabs" style="font-family:Arial, Helvetica, sans-serif">
                                     <ul class="tab-inside">
-                                         <li><a href="#tabs-33"><input type="button" name="Hoạt động hằng ngày" value="Hoạt động"/></a></li>
-                                        <li class="now"><a href="#tabs-13"><input type="button" name="Tân thủ" value="Tân thủ" /></a></li>
-                                        <li><a href="#tabs-23"><input type="button" name="Tính năng" value="Tính năng"/></a></li>
+                                         <li class = "now ui-tabs-selected ui-state-active"><a href="#tabs-13"><input type="button" name="Tân Thủ" value="Tân Thủ"/></a></li>
+                                        <li><a href="#tabs-33"><input type="button" name="Hoạt Động" value="Hoạt Động" /></a></li>
+                                       <!-- <li><a href="#tabs-23"><input type="button" name="Tính năng" value="Tính năng"/></a></li> -->
                                         
                                         <div class="clear"></div>
                                     </ul>
                                     <!-- List news tan thu cat 13 -->
-                                    <div style="display: block;" id="tabs-13" class="bg-content-1">
+                                    <div style="display: block;" id="tabs-13" class="bg-content-1 ui-tabs-panel ui-widget-content ui-corner-bottom">
                                         <ul>
+                                            <!--
                                             <li><a class="type" href="news/list/13/Tan-thu.html">[Tân thủ]</a><a href="news/view/65/Danh-hieu-trong-game.html">Danh hiệu trong game</a><span class="time">2012-06-07</span></li>
                                             <li><a class="type" href="news/list/13/Tan-thu.html">[Tân thủ]</a><a href="news/view/64/Chat-va-ket-ban-trong-game.html">Chat và kết bạn trong game</a><span class="time">2012-06-07</span></li>
                                             <li><a class="type" href="news/list/13/Tan-thu.html">[Tân thủ]</a><a href="news/view/63/Mac-va-go-trang-bi.html">Mặc và gỡ trang bị</a><span class="time">2012-06-07</span></li>
                                             <li><a class="type" href="news/list/13/Tan-thu.html">[Tân thủ]</a><a href="news/view/62/Thay-trang-bi.html">Thay trang bị</a><span class="time">2012-06-07</span></li>
                                             <li><a class="type" href="news/list/13/Tan-thu.html">[Tân thủ]</a><a href="news/view/61/Chuc-nang-Thuong-Kho.html">Chức năng Thương Khố</a><span class="time">2012-06-07</span></li>
+                                            -->
                                         </ul>
                                     </div>
                                     <!-- List news dac sac cat 14 -->
+                                    <!--
                                     <div style="display: block;" id="tabs-23" class="bg-content-1">
                                         <ul>
                                             <li><a class="type" href="news/list/14/Dac-sac.html">[Đặc sắc]</a><a href="news/view/8/Bo-Ngu-Nhi-Hai-phu-ban.html">Bổ Ngư Nhi Hải phụ bản</a><span class="time">2012-05-18</span></li>
@@ -441,14 +453,13 @@ $(function() {
                                             <li><a class="type" href="news/list/14/Dac-sac.html">[Đặc sắc]</a><a href="news/view/16/Phu-ban-Dong-Thien-Phuc-Dia.html">Phụ bản Động Thiên Phúc Địa</a><span class="time">2012-05-24</span></li>
                                         </ul>
                                     </div>
+                                    -->
                                     <!-- List news bi kip cat 15 -->
-                                    <div style="display: block;" id="tabs-33" class="bg-content-1">
+                                    <div style="display: block;" id="tabs-33" class="bg-content-1 ui-tabs-panel ui-widget-content ui-corner-bottom">
                                         <ul>
-                                            <li><a class="type" href="news/list/15/Bi-kip.html">[Bí kíp]</a><a href="news/view/39/Doi-mau-sung-vat.html">Đổi màu sủng vật</a><span class="time">2012-05-30</span></li>
-                                            <li><a class="type" href="news/list/15/Bi-kip.html">[Bí kíp]</a><a href="news/view/35/Tang-Toc-Thu-Cuoi.html">Tăng Tốc Thú Cưỡi</a><span class="time">2012-05-29</span></li>
-                                            <li><a class="type" href="news/list/15/Bi-kip.html">[Bí kíp]</a><a href="news/view/33/Thien-Cong-Khai-Vat.html">Thiên Công Khai Vật</a><span class="time">2012-05-29</span></li>
-                                            <li><a class="type" href="news/list/15/Bi-kip.html">[Bí kíp]</a><a href="news/view/32/Thu-Thap-Bang-Hoi.html">Thu Thập Bang Hội</a><span class="time">2012-05-29</span></li>
-                                            <li><a class="type" href="news/list/15/Bi-kip.html">[Bí kíp]</a><a href="news/view/1/Anh-Hung-Lenh-Ho-Than-Phu.html">Anh Hùng Lệnh - Hộ Thân Phù</a><span class="time">2012-05-17</span></li>
+                                            <li><a class="type" href="news/list/15/Bi-kip.html">[Hoạt Động]</a><a href="news/view/39/Doi-mau-sung-vat.html">Vượt Ải</a><span class="time">00h - 23h</span></li>
+                                            <li><a class="type" href="news/list/15/Bi-kip.html">[Hoạt Động]</a><a href="news/view/39/Doi-mau-sung-vat.html">Phong Lăng Độ</a><span class="time">00h - 23h</span></li>
+                                            <li><a class="type" href="news/list/15/Bi-kip.html">[Hoạt Động]</a><a href="news/view/39/Doi-mau-sung-vat.html">Hạt Huy Hoàng</a><span class="time">12h00 - 12h30</span></li>
                                         </ul>
                                     </div>
                                 </div>
