@@ -85,6 +85,25 @@ public class HomeController {
                     p.setPost_text("");
                 }
                 break;
+            case "2":
+                lstPost = getPostsSuKien();
+                for (Posts p : lstPost) {
+                    p.setPost_text("");
+                }
+                break;
+            case "3":
+                lstPost = getPostsTinhNang();
+                for (Posts p : lstPost) {
+                    p.setPost_text("");
+                }
+                break;
+            case "4":
+                lstPost = getPostsCamNang();
+                for (Posts p : lstPost) {
+                    p.setPost_text("");
+                }
+                break;
+                
         }
         HttpHeaders responseHeaders = new HttpHeaders();
         responseHeaders.add("Content-Type", "text/html; charset=UTF-8");

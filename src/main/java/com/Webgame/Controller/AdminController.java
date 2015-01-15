@@ -41,8 +41,9 @@ public class AdminController {
     private static List<Posts> postsSuKien = Collections.synchronizedList(new LinkedList<Posts>());
     private static List<Posts> postsCamNang = Collections.synchronizedList(new LinkedList<Posts>());
     private static List<Posts> postsTinhNang = Collections.synchronizedList(new LinkedList<Posts>());
+  //   private static List<Posts> postsMoiNhat = Collections.synchronizedList(new LinkedList<Posts>());
     private static List<Slide> lstSlide = Collections.synchronizedList(new LinkedList<Slide>());
-
+    
     /**
      * @return the posts
      */
