@@ -22,7 +22,7 @@
                     if(index > 5)   return; 
                     var str = "<li>"
                         + "<a href='news/list/12/He-thong.html' class='type'>[Tin Tức]</a>"
-                        + "<a   href='javascript:$.fn.PostDetail('" + "{Post_link}" + "')'>{Post_subject}</a>"
+                        + "<a href='javascript:$.fn.PostDetail(\"" + value.Post_link + "\")'>{Post_subject}</a>"
                         + "<span class='time'>{Post_time}</span>"
                         + "</li>";
                     var news = $.fn.template(str, {
@@ -45,7 +45,7 @@
                     if(index > 5)   return; 
                     var str = "<li>"
                         + "<a href='news/list/12/He-thong.html' class='type'>[Sự Kiện]</a>"
-                        + "<a  href='javascript:$.fn.PostDetail('" + "{Post_link}" + "')'>{Post_subject}</a>"
+                        + "<a  href='javascript:$.fn.PostDetail(\"" + value.Post_link + "\")'>{Post_subject}</a>"
                         + "<span class='time'>{Post_time}</span>"
                         + "</li>";
                     var news = $.fn.template(str, {
@@ -68,7 +68,7 @@
                     if(index > 5)   return; 
                     var str = "<li>"
                         + "<a href='news/list/12/He-thong.html' class='type'>[Tính Năng]</a>"
-                        + "<a  href='javascript:$.fn.PostDetail('" + "{Post_link}" + "')'>{Post_subject}</a>"
+                        + "<a  href='javascript:$.fn.PostDetail(\"" + value.Post_link + "\")'>{Post_subject}</a>"
                         + "<span class='time'>{Post_time}</span>"
                         + "</li>";
                     var news = $.fn.template(str, {
@@ -91,11 +91,11 @@
                     if(index > 5)   return; 
                     var str = "<li>"
                         + "<a href='news/list/12/He-thong.html' class='type'>[Cẩm Nang]</a>"
-                        + "<a href='javascript:$.fn.PostDetail('" + "{Post_link}" + "')'>{Post_subject}</a>"
+                        + "<a href='javascript:$.fn.PostDetail(\"" + value.Post_link + "\")'>{Post_subject}</a>"
                         + "<span class='time'>{Post_time}</span>"
                         + "</li>";
                     var news = $.fn.template(str, {
-                        "Post_link": value.Post_link + "-post.html",
+                       // "Post_link": value.Post_link + "-post.html",
                         "Post_subject": value.Post_subject,
                         "Post_time": ""
                     })
