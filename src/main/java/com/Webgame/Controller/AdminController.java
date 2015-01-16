@@ -102,7 +102,7 @@ public class AdminController {
 
         }
 
-        modelAndView.setViewName("Home/bangtin/index");
+        modelAndView.setViewName("Admin/bangtin/index");
         modelAndView.addObject("page", "content-right.jsp");
         post.setPost_time(new Date());
         modelAndView.addObject("post", post);
