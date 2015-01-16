@@ -15,11 +15,11 @@
                 
                     <li><a class="a_sk" href="/"> <span class="iconspan"></span>Trang chủ</a> </li>
                     
-                    <li><a target="_blank" class="a_sk" href="<%=request.getContextPath()%>"> <span class="iconspan"></span>Diễn đàn</a> </li>
+                    <li><a target="_blank" class="a_sk" href=""> <span class="iconspan"></span>Diễn đàn</a> </li>
                     
-                    <li><a  class="a_sk" href="<%=request.getContextPath()%>admin.htm"> <span class="iconspan"></span>Đăng bài</a> </li>
+                    <li><a  class="a_sk" href="/admin.html"> <span class="iconspan"></span>Đăng bài</a> </li>
                     
-                    <li><a class="a_sk" href="<%=request.getContextPath()%>/admin/postmanage.html?post_type=1"> <span class="iconspan"></span>Quản lí bài đăng</a> </li>
+                    <li><a class="a_sk" href="/admin/postmanage.html?post_type=1"> <span class="iconspan"></span>Quản lí bài đăng</a> </li>
                 
                     <li><a class="a_sk" href="/"> <span class="iconspan"></span>Quản lí User</a> </li>
                     
