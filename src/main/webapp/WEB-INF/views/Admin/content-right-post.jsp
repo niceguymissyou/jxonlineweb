@@ -29,7 +29,7 @@
         $.ajax({
             type: "get",
             url: "/admin/postupdown.html",
-          cache: true,
+            cache: true,
             data: {index: index, updown: updown1, post_type: type},
             success: function (response) {
                 if (response == "true") {
@@ -109,7 +109,7 @@
         $.ajax({
             type: "get",
             url: "<%=request.getContextPath()%>/admin/postdelete.html",
-          cache: true,
+            cache: true,
             data: {Post_link: post_link},
             success: function (response) {
                 location.reload();
