@@ -128,8 +128,10 @@
                         + "</div>"
                 content = $.fn.template(content,{'Post_text':data.Post_text});
                 $(".ct-mr").append(content)
-                
+                var footer = "<div class='dt-bot'> </div>"
+                $(".ct-mr .dt-mid").append(footer)
                  $(window).scrollTop($(".ct-mr").offset().top);
+                 
             }
         });
         
