@@ -78,7 +78,7 @@ public class HomeController {
     ResponseEntity<String> getPostListType(@ModelAttribute("post_type") String type, HttpServletRequest request, HttpServletResponse response) throws Exception {
         response.setCharacterEncoding("UTF-8");
         Gson gson = new Gson();
-        List<Posts> lstPost = new ArrayList();
+        List<Posts> lstPost = new ArrayList<Posts>();
         switch(type){
             case "1":
                 for (Posts p : getPosts()) {
