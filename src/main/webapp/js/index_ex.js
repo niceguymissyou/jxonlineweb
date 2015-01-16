@@ -22,11 +22,11 @@
                     if(index > 5)   return; 
                     var str = "<li>"
                         + "<a href='news/list/12/He-thong.html' class='type'>[Tin Tức]</a>"
-                        + "<a href='{Post_link}'>{Post_subject}</a>"
+                        + "<a onclick='$.fn.PostDetail{Post_link}'>{Post_subject}</a>"
                         + "<span class='time'>{Post_time}</span>"
                         + "</li>";
                     var news = $.fn.template(str, {
-                        "Post_link": value.Post_link + ".html",
+                        "Post_link": value.Post_link + "-post.html",
                         "Post_subject": value.Post_subject,
                         "Post_time": ""
                     })
@@ -45,11 +45,11 @@
                     if(index > 5)   return; 
                     var str = "<li>"
                         + "<a href='news/list/12/He-thong.html' class='type'>[Sự Kiện]</a>"
-                        + "<a href='{Post_link}'>{Post_subject}</a>"
+                        + "<a onclick='$.fn.PostDetail{Post_link}'>{Post_subject}</a>"
                         + "<span class='time'>{Post_time}</span>"
                         + "</li>";
                     var news = $.fn.template(str, {
-                        "Post_link": value.Post_link + ".html",
+                        "Post_link": value.Post_link + "-post.html",
                         "Post_subject": value.Post_subject,
                         "Post_time": ""
                     })
@@ -68,11 +68,11 @@
                     if(index > 5)   return; 
                     var str = "<li>"
                         + "<a href='news/list/12/He-thong.html' class='type'>[Tính Năng]</a>"
-                        + "<a href='{Post_link}'>{Post_subject}</a>"
+                        + "<a onclick='$.fn.PostDetail{Post_link}'>{Post_subject}</a>"
                         + "<span class='time'>{Post_time}</span>"
                         + "</li>";
                     var news = $.fn.template(str, {
-                        "Post_link": value.Post_link + ".html",
+                        "Post_link": value.Post_link + "-post.html",
                         "Post_subject": value.Post_subject,
                         "Post_time": ""
                     })
@@ -91,11 +91,11 @@
                     if(index > 5)   return; 
                     var str = "<li>"
                         + "<a href='news/list/12/He-thong.html' class='type'>[Cẩm Nang]</a>"
-                        + "<a href='{Post_link}'>{Post_subject}</a>"
+                        + "<a onclick='$.fn.PostDetail{Post_link}'>{Post_subject}</a>"
                         + "<span class='time'>{Post_time}</span>"
                         + "</li>";
                     var news = $.fn.template(str, {
-                        "Post_link": value.Post_link + ".html",
+                        "Post_link": value.Post_link + "-post.html",
                         "Post_subject": value.Post_subject,
                         "Post_time": ""
                     })
@@ -107,4 +107,31 @@
             }
         });
     };
+    $.fn.PostDetail = function(url){
+        $getJSON(url , function(data){
+            if(data){
+                $(".ct-mr").empty()
+                $(".ct-mr").addClass("dt-page")
+                var title = "<div class='dt-top'>"
+                        + "<div class='inside-tit'>"
+                        + "<span class='breadcum'><a href='/'><strong>Trang chủ</strong></a> &gt;</span> "
+                        + "<span style='width: 450px' class='box-name'>{title}</span> </div>"
+                        + "</div>"
+                title = $.fn.template(title,{'title':data.Post_subject});
+                $(".ct-mr").append(title)
+                var content = "<div class = 'dt-mid'>"
+                        + "<div class = 'content'>"
+                        + "<div class = 'new-content'>"
+                        + "{Post_text}"
+                        + "</div>"
+                        + "</div>"
+                        + "</div>"
+                content = $.fn.template(content,{'Post_text':data.Post_text});
+                $(".ct-mr").append(content)
+            }
+        });
+        
+
+    };
+    
 }(jQuery));
