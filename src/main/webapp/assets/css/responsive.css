@@ -1,0 +1,204 @@
+/* HTML5 display-role reset for older browsers */
+.menuResponsive{}
+.menuMore {
+  display: none;
+}
+.menuFull ul {
+  margin: 0;
+}
+
+.menuFull ul li {
+  display : inline-block;
+  text-align: center;
+}
+
+.menuFull ul li a {
+  text-decoration: none;
+  color: #FFF;
+  margin: 0;
+}
+
+.menuSide {
+  display: none;
+}
+.avatarBox .showMore{display:none}
+#payType li{border:none;}
+@media all and (max-width: 700px) {
+ .container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+width: 100%;
+}
+.wrap-left, .wrap-right.inHome, .mainContent .wrap, .wrap{width:100%}
+  .menuMore {
+    display: block;
+    height: 5%;
+    padding: 0% 5% 0% 5%;
+    text-align: right;
+    margin: 0;
+    font-size: 170%;
+  }
+
+  .menuMore a {
+    text-decoration: none;
+    color: #FFF;
+/*    padding: 0 13px;*/
+    line-height: 60px;
+    height: 60px;
+    text-transform: uppercase;
+    display: inline;
+  }
+  .menuMore a span.circle{
+   width: 10px;
+   height: 10px;
+   background-color: #F5F3EC;
+   display: inline-block;
+   margin: 3px;
+   border-radius: 50%;
+   -moz-border-radius: 50%;
+   -webkit-border-radius: 50%;
+   box-shadow: 1px 0px 1px rgba(0,0,0,.5);
+  }
+
+  .menuFull {
+    display: none;
+  }
+
+  .menuSide {
+    display: block;
+    position: fixed;
+    width: 50%;
+    margin-left: 100%;
+    height: 40%;
+    top: 5 ;
+  }
+
+  .menuSide ul.menuHeader{
+    margin: 0;
+  }
+
+  .menuSide ul.menuHeader li {
+    list-style-type: none;
+    background: #333;
+    text-align: right;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    float:none;
+    line-height: 40px;
+    height: 40px;
+  }
+
+  .menuSide ul.menuHeader li a {
+    text-decoration: none;
+    color: #FFF;
+    margin: 0;
+    padding-right: 10%;
+    height:40px;
+    line-height:40px;
+}
+ .menuSide ul.menuHeader li.selected > span{background-image:none;}
+ ul.bank > li{float:left}
+ ul.bank > li:nth-child(4), ul.bank > li:nth-child(5) {
+  display:none;
+}
+ ul.bank > li.active > a, ul.bank > li.active > a:hover {
+color: #FFDC17 !important;
+margin: 5px !important;
+/*border: none;*/
+/*border-top: 1px solid #ebe7da;*/
+background: #333;
+}
+ul.bank {
+border: none;
+background: #f5f3ec;
+}
+ul.bank > li > a {
+display: block;
+line-height: 22px;
+padding: 5px 15px;
+margin: 5px;
+color: #aaa;
+border: none;
+border-top: 1px solid #f6f5f0;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+font-size: 15px;
+}
+.footer-static ul.footer-menu {
+display:none;
+/* left: 200px; */
+}
+body{background:url('../images/bg-bot.png') center 104% no-repeat #f5f3ec}
+.mainContent{margin-bottom: 15px;}
+.footer-static {margin: 0;}
+.avatarBox {position:relative}
+.avatarBox .showMore{display:block}
+.avatarBox .showMore{position: absolute;
+height: 30px;
+width: 30px;
+right: 10px;
+background-color: #eee;
+border-radius: 5px;
+text-align: center;
+font-size: 170%;
+cursor: pointer;
+top: 25px;}
+.profileInfo{display:none}
+.form-horizontal .control-label {
+width: 100%;
+text-align:left;
+}
+.form-horizontal .controls {
+margin-left: 0;
+}
+#payType li{border:none;}
+/*sigup-signin*/
+.mainContent .wrap.one-column{width:94%; margin:0 3%;}
+.wrap-signin-left{width: 100%;
+float: none;}
+.form-horizontal input[type=text], .form-horizontal input[type=password], .form-horizontal span.uneditable-input{width:90%}
+.openID{margin: 0 0 20px 0;
+height: auto;
+float: none;
+text-align: center;
+background: none;}
+.account-setting-menu{
+	height: 163px;
+}
+
+.login .mainContent{margin-bottom: 0; padding: 0;}
+.login .mainContent .wrap.one-column {
+width: 100%;
+margin: 0 0;
+}
+.login .openID{
+  padding: 0;
+  margin: 0;
+}
+.login .openID{
+  float: left;
+  margin: 0 0 0 10px;
+}
+.login .openID > a:before{
+  margin: 0;
+  width: 30px;
+height: 30px;
+background: url('../images/ico-openid2.png') top left no-repeat;
+}.login .openID > a{
+  margin: 0 0 0 10px;
+  width: auto;
+}
+.login .openID > a.id-gmail:before {
+background-position: -30px top;
+}
+.login .openID > a.id-yahoo:before {
+background-position: -60px top;
+}
+.login .form-horizontal input[type=text], .form-horizontal input[type=password], .form-horizontal span.uneditable-input{
+  height: 30px;
+}
+.login .signin-link{
+  text-align: left;
+}
+}
