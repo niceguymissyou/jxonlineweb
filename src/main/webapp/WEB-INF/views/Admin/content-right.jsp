@@ -18,8 +18,8 @@
                         <div class="box_titel">
                             <h1 class="titel_h1">Đăng bài</h1>
                             <div class="line_titel">
-                                <a href="<%=request.getContextPath()%>">Trang chủ</a><span>/</span>
-                                <a href="<%=request.getContextPath()%>/admin.htm">Admin</a>
+                                <a href="/">Trang chủ</a><span>/</span>
+                                <a href="/admin.htm">Admin</a>
                             </div>
                             <div style="clear:both"></div>
                         </div>
@@ -40,7 +40,7 @@
                             <div class="news_ul">
                                  <c:forEach items="${lstpost}" var="post">
                                     <div class="div_tin">
-                                        <a href="<%=request.getContextPath()%>/${post.getPost_link()}-post.htm">
+                                        <a href="/${post.getPost_link()}-post.htm">
                                              <c:out value="${post.getPost_subject()}" escapeXml="false" />
                                         </a>
                                         <span>[ <fmt:formatDate pattern="dd-MM-yyyy HH:mm:ss "  value="${post.getPost_time()}" /> ]</span>
