@@ -133,10 +133,10 @@
                         <div class="box_titel">
                             <h1 class="titel_h1">Quản lí bài đăng</h1>
                             <div class="line_titel">
-                                <a href="/admin/postmanage.htm?post_type=1" ><span>Tin tức</span></a>
-                                <a href="/admin/postmanage.htm?post_type=2"><span>Sự kiện</span></a>
-                                <a href="/admin/postmanage.htm?post_type=3"><span>Tính năng</span></a>
-                                <a href="/admin/postmanage.htm?post_type=4"><span>Cẩm nang</span></a>
+                                <a href="/admin/postmanage.html?post_type=1" ><span>Tin tức</span></a>
+                                <a href="/admin/postmanage.html?post_type=2"><span>Sự kiện</span></a>
+                                <a href="/admin/postmanage.html?post_type=3"><span>Tính năng</span></a>
+                                <a href="/admin/postmanage.html?post_type=4"><span>Cẩm nang</span></a>
                             </div>
                             <div style="clear:both"></div>
                         </div>

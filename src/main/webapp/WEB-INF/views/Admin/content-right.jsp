@@ -40,7 +40,7 @@
                             <div class="news_ul">
                                  <c:forEach items="${lstpost}" var="post">
                                     <div class="div_tin">
-                                        <a href="/${post.getPost_link()}-post.htm">
+                                        <a href="/${post.getPost_link()}-post.html">
                                              <c:out value="${post.getPost_subject()}" escapeXml="false" />
                                         </a>
                                         <span>[ <fmt:formatDate pattern="dd-MM-yyyy HH:mm:ss "  value="${post.getPost_time()}" /> ]</span>
