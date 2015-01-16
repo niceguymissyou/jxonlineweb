@@ -48,7 +48,13 @@ public class Posts {
     
     public Posts(){}
     
-  
+    public Posts(String Post_link, String Post_sucject, String Post_text, String Post_type,String preview){
+        this.Post_link = Post_link;
+        this.Post_subject = Post_subject;
+        this.Post_text = Post_text;
+        this.Post_type = Post_type;
+        this.preview = preview;
+    }
     /**
      * @return the Post_text
      */
