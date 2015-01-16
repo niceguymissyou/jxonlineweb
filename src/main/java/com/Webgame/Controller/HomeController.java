@@ -27,6 +27,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 import static com.Webgame.Controller.AdminController.*;
 import java.util.ArrayList;
+import org.springframework.web.bind.annotation.PathVariable;
 /**
  *
  * @author VuNguyen
@@ -108,6 +109,50 @@ public class HomeController {
         HttpHeaders responseHeaders = new HttpHeaders();
         responseHeaders.add("Content-Type", "text/html; charset=UTF-8");
         return new ResponseEntity<String>(gson.toJson(lstPost), responseHeaders, HttpStatus.CREATED);
+    }
+    
+    @RequestMapping(value = "/{post_link}-post", method = RequestMethod.GET)
+    public @ResponseBody
+    ResponseEntity<String> Post(@PathVariable("post_link") String post_link, HttpServletRequest request, HttpServletResponse response) { 
+        response.setCharacterEncoding("UTF-8");
+        HttpHeaders responseHeaders = new HttpHeaders();
+        responseHeaders.add("Content-Type", "text/html; charset=UTF-8");
+        Gson gson = new Gson();
+        
+        Posts post = null;
+        for (int i = 0; i < getPosts().size(); i++) {
+            if (getPosts().get(i).getPost_link().equals(post_link)) {
+                post = getPosts().get(i);
+                return new ResponseEntity<String>(gson.toJson(post), responseHeaders, HttpStatus.CREATED);
+            }
+        }
+        for (int i = 0; i < getPostsSuKien().size(); i++) {
+            if (getPostsSuKien().get(i).getPost_link().equals(post_link)) {
+                post = getPostsSuKien().get(i);
+                return new ResponseEntity<String>(gson.toJson(post), responseHeaders, HttpStatus.CREATED);     
+            }
+        }
+
+        for (int i = 0; i < getPostsCamNang().size(); i++) {
+            if (getPostsCamNang().get(i).getPost_link().equals(post_link)) {
+                post = getPostsCamNang().get(i);
+                return new ResponseEntity<String>(gson.toJson(post), responseHeaders, HttpStatus.CREATED);
+            }
+        }
+        for (int i = 0; i < getPostsTinhNang().size(); i++) {
+            if (getPostsTinhNang().get(i).getPost_link().equals(post_link)) {
+                post = getPostsTinhNang().get(i);
+                return new ResponseEntity<String>(gson.toJson(post), responseHeaders, HttpStatus.CREATED);
+            }
+        }
+
+        post = postsService.getData(post_link);
+        if (post == null) {
+            post = new Posts();
+            post.setPost_subject("error");
+            post.setPost_text("Link không tồn tại");
+        }
+        return new ResponseEntity<String>(gson.toJson(post), responseHeaders, HttpStatus.CREATED);
     }
 
 }
