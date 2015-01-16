@@ -43,9 +43,7 @@ public class HomeController {
     
     @RequestMapping("/index")
     public ModelAndView index(){
-        model.setViewName("index");
-        model.addObject("user", "adafs");
-        
+        model.setViewName("index");   
         return model;
     }
     @RequestMapping("/remember")
