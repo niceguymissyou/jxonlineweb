@@ -128,6 +128,8 @@
                         + "</div>"
                 content = $.fn.template(content,{'Post_text':data.Post_text});
                 $(".ct-mr").append(content)
+                
+                 $(window).scrollTop($(".ct-mr").offset().top);
             }
         });
         
