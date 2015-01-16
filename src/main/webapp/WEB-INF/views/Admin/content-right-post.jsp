@@ -28,7 +28,7 @@
 
         $.ajax({
             type: "get",
-            url: "<%=request.getContextPath()%>/admin/postupdown.html",
+            url: "/admin/postupdown.html",
           cache: true,
             data: {index: index, updown: updown1, post_type: type},
             success: function (response) {
@@ -62,11 +62,11 @@
                 for (i = 0; i < obj.length; i++) {
                     s += "<div class='divlist' id='" + i + "'>"
                             + "<div class='listL'>"
-                            + "<a href='<%=request.getContextPath()%>/" + obj[i].Post_link + "-post.html" + "'><img  src='<%=request.getContextPath()%>/images/ximg_news.jpg.pagespeed.ic.S5fbBR57vI.jpg'></a>"
+                            + "<a href='/" + obj[i].Post_link + "-post.html" + "'><img  src='<%=request.getContextPath()%>/images/ximg_news.jpg.pagespeed.ic.S5fbBR57vI.jpg'></a>"
                             + " </div>"
                             + " <div class='listR'>"
                             + "<div class= 'listh1'>"
-                            + "<a href='<%=request.getContextPath()%>/" + obj[i].Post_link + "-post.html" + "'>"
+                            + "<a href='/" + obj[i].Post_link + "-post.html" + "'>"
                             + "<h1 class='conten_h3'>"
                             + "<strong>"
                             + "<div style='color:#A52A2A'>"
@@ -86,7 +86,7 @@
                             + "<a style = 'margin-left: 10px' href='javascript:postupdown(" + "\"" + obj[i].Post_link + "\"" + ",\"up\"," + "\"" + obj[i].Post_type + "\"" + ")'><u>Up</u></a>"
                             + "<a style = 'margin-left: 10px' href='javascript:postupdown(" + "\"" + obj[i].Post_link + "\"" + ",\"Down\"," + "\"" + obj[i].Post_type + "\"" + ")'><u>Down</u></a>"
                             + "<a style = 'margin-left: 10px' href='javascript:postdelete(" + "\"" + obj[i].Post_link + "\"" + ")'><u>Delete</u></a>"
-                            + "<a href='<%=request.getContextPath()%>/admin/postedit.html?Post_link=" + obj[i].Post_link + "' style = 'margin-left: 10px'><u>Edit</u></a>"
+                            + "<a href='/admin/postedit.html?Post_link=" + obj[i].Post_link + "' style = 'margin-left: 10px'><u>Edit</u></a>"
                             + "</h3>"
 
 
@@ -133,10 +133,10 @@
                         <div class="box_titel">
                             <h1 class="titel_h1">Quản lí bài đăng</h1>
                             <div class="line_titel">
-                                <a href="<%=request.getContextPath()%>/admin/postmanage.htm?post_type=1" ><span>Tin tức</span></a>
-                                <a href="<%=request.getContextPath()%>/admin/postmanage.htm?post_type=2"><span>Sự kiện</span></a>
-                                <a href="<%=request.getContextPath()%>/admin/postmanage.htm?post_type=3"><span>Tính năng</span></a>
-                                <a href="<%=request.getContextPath()%>/admin/postmanage.htm?post_type=4"><span>Cẩm nang</span></a>
+                                <a href="/admin/postmanage.htm?post_type=1" ><span>Tin tức</span></a>
+                                <a href="/admin/postmanage.htm?post_type=2"><span>Sự kiện</span></a>
+                                <a href="/admin/postmanage.htm?post_type=3"><span>Tính năng</span></a>
+                                <a href="/admin/postmanage.htm?post_type=4"><span>Cẩm nang</span></a>
                             </div>
                             <div style="clear:both"></div>
                         </div>
