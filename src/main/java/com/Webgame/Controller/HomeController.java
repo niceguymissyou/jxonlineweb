@@ -81,27 +81,31 @@ public class HomeController {
         List<Posts> lstPost = new ArrayList();
         switch(type){
             case "1":
-                lstPost = getPosts();
-                for (Posts p : lstPost) {
-                    p.setPost_text("");
+                for (Posts p : getPosts()) {
+                    Posts tmp = new Posts(p.getPost_link(),p.getPost_subject(),p.getPost_text(),p.getPost_type(),p.getPreview()); 
+                    tmp.setPost_text("");
+                    lstPost.add(tmp);
                 }
                 break;
             case "2":
-                lstPost = getPostsSuKien();
-                for (Posts p : lstPost) {
-                    p.setPost_text("");
+                for (Posts p : getPostsSuKien()) {
+                    Posts tmp = new Posts(p.getPost_link(), p.getPost_subject(), p.getPost_text(), p.getPost_type(), p.getPreview());
+                    tmp.setPost_text("");
+                    lstPost.add(tmp);
                 }
                 break;
             case "3":
-                lstPost = getPostsTinhNang();
-                for (Posts p : lstPost) {
-                    p.setPost_text("");
+                for (Posts p : getPostsTinhNang()) {
+                    Posts tmp = new Posts(p.getPost_link(), p.getPost_subject(), p.getPost_text(), p.getPost_type(), p.getPreview());
+                    tmp.setPost_text("");
+                    lstPost.add(tmp);
                 }
                 break;
             case "4":
-                lstPost = getPostsCamNang();
-                for (Posts p : lstPost) {
-                    p.setPost_text("");
+                for (Posts p : getPostsCamNang()) {
+                    Posts tmp = new Posts(p.getPost_link(), p.getPost_subject(), p.getPost_text(), p.getPost_type(), p.getPreview());
+                    tmp.setPost_text("");
+                    lstPost.add(tmp);
                 }
                 break;
                 
