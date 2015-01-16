@@ -50,7 +50,7 @@
 
         $.ajax({
             type: "get",
-            url: "<%=request.getContextPath()%>/getpostlist.html",
+            url: "/getpostlist.html",
             cache: true,
             contentType: "application/json; charset=utf-8",
             data: {index: index, post_type: type},
