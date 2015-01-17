@@ -30,4 +30,8 @@
     </bean>
       
     <bean id="postsService" class = "com.Webgame.Service.PostsServiceImpl"/>
+    <bean id="reCaptcha" class = "com.Webgame.lib.ReCaptchaImpl">
+        <property name="secret"  value = "6Ld5mwATAAAAAJWWRFCDYH49IDHJ2auj3TfXZYEd"/>
+        <property name="siteSecret" value="6Ld5mwATAAAAANej65k2E_al8DuhsOkEZxaptzmx"/>
+    </bean>
 </beans>
