@@ -8,20 +8,20 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
-    <!-- Mirrored from ids.vohiep.com/users/log   in by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 31 Dec 2014 07:21:48 GMT -->
-    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-            <title>Võ lâm truyền kỳ - thập đại phái</title>
-            <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css" />
-            <link rel="stylesheet" type="text/css" href="../assets/css/site.css" />
-            <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css" />
-            <link rel="icon" type="image/png" href="../assets/images/favicon-tt.png">
-                <script type="text/javascript" src="../assets/js/jquery-1.9.1.min.js"></script>
-                <script type="text/javascript" src="../assets/js/bootstrap.min.js"></script>
-                <script type="text/javascript" src="../assets/js/appsScript.js"></script>
-                <script src="../js/thapthanh.js" type="text/javascript"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <title>Võ lâm truyền kỳ - thập đại phái</title>
+        <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css" />
+        <link rel="stylesheet" type="text/css" href="../assets/css/site.css" />
+        <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css" />
+        <link rel="icon" type="image/png" href="../assets/images/favicon-tt.png"/>
+        <script type="text/javascript" src="../assets/js/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="../assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../assets/js/appsScript.js"></script>
+        <script src="../js/thapthanh.js" type="text/javascript"></script>
+        <script src='https://www.google.com/recaptcha/api.js?hl=vi'></script>
                 <script>
                     $(document).ready(function () {
                         var posMenu = 0;
@@ -139,6 +139,10 @@
                                                                                 <div class="controls">
                                                                                     <input type="text" value="" placeholder="" name="email" id="email" data-original-title="" title="">
                                                                                 </div>
+                                                                            </div>
+                                                                            <div class="control-group">
+                                                                                <label for="inputEmail" class="control-label"><span class="required">*</span>Captcha:</label>
+                                                                                <div class="g-recaptcha controls" data-sitekey="6Ld5mwATAAAAANej65k2E_al8DuhsOkEZxaptzmx"></div>
                                                                             </div>
                                                                             <div class="control-group">
                                                                                 <div class="controls submit">
