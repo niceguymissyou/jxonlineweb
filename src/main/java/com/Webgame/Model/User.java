@@ -22,7 +22,7 @@ import org.springframework.jdbc.core.RowMapper;
  * @author VuNguyen
  */
 public class User {
-     @Size(min=6,max=18)
+    @Size(min=6,max=18)
     @Pattern(regexp="[a-zA-Z0-9]+")
     @NotEmpty 
     private String cAccName;
@@ -38,7 +38,7 @@ public class User {
     private String cPassWord;
     
     @Email
-    @NotEmpty 
+    @NotEmpty
     private String cEmail;
     
     private String cRealName;
@@ -211,38 +211,5 @@ public class User {
      */
     public void setEmailactive(int emailactive) {
         this.emailactive = emailactive;
-    }
-    
-    @Autowired
-    static DataSource dataSourceMysql;
-    
-    //@Autowired
-   // static DataSource dataSource;
-    public static class UsersRowMapper implements RowMapper {
-
-        public Object mapRow(ResultSet resultSet, int rowNum) throws SQLException {
-            User user = new User();
-
-            user.setcAccName(resultSet.getString("username"));
-            user.setcPassWord(resultSet.getString("password1"));
-            user.setcSecPassWord(resultSet.getString("password2"));
-            user.setcEmail(resultSet.getString("email"));
-            user.setcRealName(resultSet.getString("fullname"));
-            user.setCSex(resultSet.getInt("sex"));
-            user.setdBirthDay(resultSet.getDate("birthday"));
-            user.setcPhone(resultSet.getString("phone"));
-            user.setCreatedatetime(resultSet.getDate("createdatetime"));
-            user.setEmailactive(resultSet.getInt("emailactive"));
-
-            return user;
-        }
-
-    }
-    
-    public static int CountUserOnline() {
-        String sql = "select count(*) from Account_Info where iClientID = 1";
-       // JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-       // return jdbcTemplate.queryForInt(sql);
-        return 0;
     }
 }
