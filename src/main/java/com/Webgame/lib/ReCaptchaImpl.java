@@ -53,7 +53,6 @@ public class ReCaptchaImpl implements ReCaptchaGoogle {
     }
 
     public static class ReCaptchaResponse {
-
         public String success;
         public String errorCodes;
     }
