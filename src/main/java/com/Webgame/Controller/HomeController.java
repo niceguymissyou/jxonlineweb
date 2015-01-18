@@ -33,7 +33,6 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @author VuNguyen
  */
 @Controller
-@SessionAttributes("user")
 public class HomeController {
     
     @Autowired
@@ -50,8 +49,6 @@ public class HomeController {
     public ModelAndView abc(HttpSession session){
         model.setViewName("remember");
         model.addObject("user", session.getAttribute("user"));
-        
-        System.out.println(session.getAttribute("user"));
         return model;
     }
     @RequestMapping(value = "/getpostlist", method = RequestMethod.GET)

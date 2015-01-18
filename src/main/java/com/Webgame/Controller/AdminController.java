@@ -27,6 +27,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import com.Webgame.Model.*;
 import com.Webgame.Service.PostsService;
+import com.Webgame.Service.UserService;
 import org.springframework.stereotype.Controller;
 
 /**
@@ -80,6 +81,9 @@ public class AdminController {
     }
     @Autowired
     PostsService postsService;
+    
+    @Autowired
+    UserService userService;
     @RequestMapping(method = RequestMethod.GET)
     public ModelAndView index(HttpServletRequest request, HttpServletResponse response) {
 
@@ -362,7 +366,7 @@ public class AdminController {
 
         HttpHeaders responseHeaders = new HttpHeaders();
         responseHeaders.add("Content-Type", "text/html; charset=UTF-8");
-        return new ResponseEntity<String>("user online = " + Integer.toString(User.CountUserOnline()), responseHeaders, HttpStatus.CREATED);
+        return new ResponseEntity<String>("user online = " + Integer.toString(userService.CountUserOnline()), responseHeaders, HttpStatus.CREATED);
     }
 
 }
