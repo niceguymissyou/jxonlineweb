@@ -16,6 +16,7 @@
 <link href="css/jquery.ui.tabs.css" rel="stylesheet" type="text/css" />
 <link href="css/jquery.fancybox-1.3.1.css" rel="stylesheet" type="text/css" />
 <link href="css/menu.css" rel="stylesheet" type="text/css" />
+<link type="text/css" rel="stylesheet" href="css/simplePagination.css"/>
 
 <!--End css files-->
 <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
@@ -27,7 +28,7 @@
 <script type="text/javascript" src="js/vohiep.js"></script>   
 <script type="text/javascript" src="js/bt.modal.js"></script>   
 <script type="text/javascript" src="js/index_ex.js"></script>  
-
+<script type="text/javascript" src="js/jquery.simplePagination.js"></script>
  
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
