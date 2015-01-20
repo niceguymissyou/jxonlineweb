@@ -160,5 +160,35 @@ public class HomeController {
         }
         return new ResponseEntity<String>(gson.toJson(post), responseHeaders, HttpStatus.CREATED);
     }
+    
+    @RequestMapping("/{type}-lst")
+    public ModelAndView postList(@PathVariable("type") String type){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView = new ModelAndView();
+        modelAndView.setViewName("Home/postlst");
+         switch(type){
+            case "tin-tuc":
+                modelAndView.addObject("type", "Tin tức");
+                modelAndView.addObject("post_type", '1');
+                break;
+            case "su-kien":
+                modelAndView.addObject("type", "Sự kiện");
+                modelAndView.addObject("post_type", '2');
+                break;
+            case "tinh-nang":
+                modelAndView.addObject("type", "Tính năng");
+                modelAndView.addObject("post_type", '3');
+                break;
+            case "cam-nang":
+                modelAndView.addObject("type", "Cẩm nang");
+                modelAndView.addObject("post_type", '4');
+                break;    
+            default:  
+                modelAndView.addObject("type", "Tin tức");
+                modelAndView.addObject("post_type", '1');
+                break;
+        }
+        return modelAndView;
+    }
 
 }
