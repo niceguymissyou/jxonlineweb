@@ -34,7 +34,7 @@ public class UserFilter implements Filter {
        
         HttpServletRequest req = ( HttpServletRequest)request;
         HttpServletResponse res= (HttpServletResponse) response;
-         HttpSession session = req.getSession(false);
+        HttpSession session = ((HttpServletRequest) request).getSession();
          
          if (session.getAttribute("user") != null){
              chain.doFilter(req,res); 
