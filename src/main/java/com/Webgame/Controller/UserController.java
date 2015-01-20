@@ -127,7 +127,8 @@ public class UserController {
 
                 jsonResponse.result = "";
                 ModelAndView model = new ModelAndView();
-                model.setViewName("redirect:/tai-khoan/dang-nhap.html?username=" + registerForm.getcAccName());
+                String redirectUrl = request.getScheme() + "://thapdaiphai.com/tai-khoan/dang-nhap.html?username=" + registerForm.getcAccName();
+                model.setViewName("redirect:" + redirectUrl);
                 return model;
             
           
