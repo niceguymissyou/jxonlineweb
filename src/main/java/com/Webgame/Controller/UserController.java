@@ -12,6 +12,7 @@ import com.Webgame.Form.UpdateInfoForm;
 import com.Webgame.Model.*;
 import com.Webgame.Service.UserService;
 import com.Webgame.lib.JsonResponse;
+import static com.Webgame.lib.MD5.md5;
 import com.Webgame.lib.ReCaptchaGoogle;
 import com.Webgame.lib.ReCaptchaImpl;
 import com.google.gson.Gson;
@@ -43,7 +44,6 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping(value = "/tai-khoan")
 public class UserController {
 
-    ModelAndView model = new ModelAndView();
     @Autowired
     ReCaptchaGoogle reCaptcha;
 
@@ -52,6 +52,7 @@ public class UserController {
 
     @RequestMapping("/dang-nhap")
     public ModelAndView loginView(@ModelAttribute("username") String username) {
+        ModelAndView model = new ModelAndView();
         model.setViewName("User/login");
         model.addObject("username", username);
         return model;
@@ -67,9 +68,7 @@ public class UserController {
         jsonResponse.result = "Sai tên đăng nhập hoặc mật khẩu";
         jsonResponse.success = false;
         
-        String remoteAddr = request.getRemoteAddr();
-        
-        if (!result.hasErrors() && reCaptcha.checkAnswer(remoteAddr,request.getParameter("g-recaptcha-response"))) {
+        if (!result.hasErrors()) {
             if (userService.login(loginForm)) {
                 jsonResponse.result = "";
                 jsonResponse.success = true;
@@ -84,6 +83,7 @@ public class UserController {
 
     @RequestMapping("/dang-ky")
     public ModelAndView registerView() {
+        ModelAndView model = new ModelAndView();
         model.setViewName("User/register");
         return model;
     }
@@ -91,8 +91,7 @@ public class UserController {
     private MessageSource messages;
 
     @RequestMapping(value = "/dang-ky", method = RequestMethod.POST)
-    public @ResponseBody
-    ResponseEntity<String> register(@Valid RegisterForm registerForm,
+    public ModelAndView register(@Valid RegisterForm registerForm,
             BindingResult result, HttpServletRequest request, HttpServletResponse response) {
         Gson gson = new Gson();
         JsonResponse jsonResponse = new JsonResponse();
@@ -109,10 +108,12 @@ public class UserController {
                 jsonResponse.success = false;
             }
         }
+        /*
         if (userService.IsExistsEmail(registerForm.getcEmail())) {
             jsonResponse.result += "<div>" + "Email đã tồn tại" + "</div>";
             jsonResponse.success = false;
         }
+         */
         if (userService.IsExistsUserName(registerForm.getcAccName())) {
            jsonResponse.result += "<div>" + "Tên đăng nhập đã tồn tại" + "</div>";
            jsonResponse.success = false;
@@ -121,14 +122,23 @@ public class UserController {
              jsonResponse.result += "<div>" + "Lỗi bảo mật" + "</div>";
              jsonResponse.success = false;
         }
-        if (jsonResponse.success == true) {
-            userService.register(registerForm);
-            jsonResponse.result = "";
-        } 
-        response.setCharacterEncoding("UTF-8");
-        HttpHeaders responseHeaders = new HttpHeaders();
-        responseHeaders.add("Content-Type", "text/html; charset=UTF-8");
-        return new ResponseEntity<String>(gson.toJson(jsonResponse), responseHeaders, HttpStatus.CREATED);
+        String error = "";
+        if (jsonResponse.success == true && userService.register(registerForm)) {
+
+                jsonResponse.result = "";
+                ModelAndView model = new ModelAndView();
+                model.setViewName("redirect:/tai-khoan/dang-nhap.html?username=" + registerForm.getcAccName());
+                return model;
+            
+          
+        } else {
+            error = "<div class = 'alert'>" + jsonResponse.result + "</div>";
+            ModelAndView model = new ModelAndView();
+            model.setViewName("User/register");
+            model.addObject("error", error);
+            return model;
+        }
+        
     }    
     
     @RequestMapping(value = "/thong-tin", method = RequestMethod.GET)
@@ -169,6 +179,7 @@ public class UserController {
     
    @RequestMapping(value = "/doi-mat-khau",method = RequestMethod.GET)
     public ModelAndView passChange(HttpSession session) {
+        ModelAndView model = new ModelAndView();
         model.setViewName("User/passchange");
         model.addObject("user", session.getAttribute("user"));
         return model;
@@ -179,24 +190,42 @@ public class UserController {
             BindingResult result,
             HttpSession session, HttpServletRequest request, HttpServletResponse response) {
         Gson gson = new Gson();
+        
         JsonResponse jsonResponse = new JsonResponse();
+        jsonResponse.success = true;
+        
         if (result.hasErrors()) {
             jsonResponse.success = false;
             jsonResponse.result = "<div>Mật khẩu phải là kí tự số hoặc chữ (8 - 24)</div>";
+        } 
+        if (userService.getUser(session.getAttribute("user").toString()) != null 
+                &&  !userService.getUser(session.getAttribute("user").toString()).getcPassWord().equals(md5(passChangeForm.getcPassWord()))){
+            jsonResponse.success = false;
+            jsonResponse.result = "<div>Mật khẩu không đúng</div>";
         }
-        if (userService.PassChange(passChangeForm, session.getAttribute("user").toString())) {
-            jsonResponse.success = true;
-            jsonResponse.result = "<div>Đổi mật khẩu thành công</div>";
+        if (jsonResponse.success && userService.PassChange(passChangeForm, session.getAttribute("user").toString())) {   
+                jsonResponse.success = true;
+                jsonResponse.result = "<div>Đổi mật khẩu thành công</div>";
         }
+            
+        
+       
         
         response.setCharacterEncoding("UTF-8");
         HttpHeaders responseHeaders = new HttpHeaders();
         responseHeaders.add("Content-Type", "text/html; charset=UTF-8");
         return new ResponseEntity<String>(gson.toJson(jsonResponse), responseHeaders, HttpStatus.CREATED);
     }
-    
+    @RequestMapping(value = "/dang-xuat" , method = RequestMethod.GET)
+    public ModelAndView dangxuat(HttpSession session) {
+        ModelAndView model = new ModelAndView();
+        model.setViewName("redirect:/tai-khoan/dang-nhap.html");
+        session.invalidate();
+        return model;
+    }
     @RequestMapping(method = RequestMethod.GET)
     public ModelAndView index(HttpSession session) {
+        ModelAndView model = new ModelAndView();
         model.setViewName("User/index");
         model.addObject("user", session.getAttribute("user"));
         return model;
