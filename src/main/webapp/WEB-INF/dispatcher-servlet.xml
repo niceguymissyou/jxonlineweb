@@ -20,18 +20,31 @@
   
     <context:annotation-config />
           
-
+    <bean id="dataSource"  
+                class="org.springframework.jdbc.datasource.DriverManagerDataSource">  
+        <property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />  
+        <property name="url" value="jdbc:sqlserver://127.0.0.1;databaseName=account_tong" />  
+        <property name="username" value="sa" />  
+        <property name="password" value="account_tong" />   
+    </bean>
     <bean id="dataSourceMysql"  
           class="org.springframework.jdbc.datasource.DriverManagerDataSource">  
         <property name="DriverClassName" value="com.mysql.jdbc.Driver" />  
         <property name="url" value="jdbc:mysql://localhost:3306/webjxonline?characterEncoding=UTF-8" />  
         <property name="username" value="root" />  
-        <property name="password" value="account_tong"/>   
+        <property name="password" value="account_tong"/>
     </bean>
       
     <bean id="postsService" class = "com.Webgame.Service.PostsServiceImpl"/>
+    <bean id="userService" class = "com.Webgame.Service.UserServiceImpl"/>
+    
     <bean id="reCaptcha" class = "com.Webgame.lib.ReCaptchaImpl">
         <property name="secret"  value = "6Ld5mwATAAAAAJWWRFCDYH49IDHJ2auj3TfXZYEd"/>
         <property name="siteSecret" value="6Ld5mwATAAAAANej65k2E_al8DuhsOkEZxaptzmx"/>
+    </bean>
+    
+    <bean id="messageSource"
+              class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <property name="basename" value="/WEB-INF/messages" />
     </bean>
 </beans>

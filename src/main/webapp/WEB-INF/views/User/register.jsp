@@ -52,6 +52,57 @@
                                 showProfile = 0;
                             }
                         });
+                        $(".btn-signin.pull-left").click(function(){
+                             $(".alert").remove()
+                              if ($("#confirm_password").val() != $("#password").val()) {
+                                            $(".alert").remove()
+                                            var str = "<div class = 'alert'>"
+                                                    + "<div>Mật khẩu phải trùng nhau</div>"
+                                                    + "</div>"
+                                            $(str).insertBefore($("#formReg"))
+                                            $(window).scrollTop($(".wrap.one-column").offset().top);
+                                            return false;
+                             }
+                        })
+                        /*
+                        $(".btn-signin.pull-left").click(function(){
+                                $(".alert").remove()
+                           if ($("#confirm_password").val() != $("#password").val()) {
+                                            $(".alert").remove()
+                                            var str = "<div class = 'alert'>"
+                                                    + "<div>Mật khẩu phải trùng nhau</div>"
+                                                    + "</div>"
+                                            $(str).insertBefore($("#formReg"))
+                                            $(window).scrollTop($(".wrap.one-column").offset().top);
+                                            return 
+                             }
+                            $.post("/tai-khoan/dang-ky.html",
+                                 {'cAccName':$("#username").val(),
+                                 'cPassWord': $("#password").val(),
+                                  'cEmail': $("#email").val(),
+                                  'g-recaptcha-response': $("#g-recaptcha-response").val() },
+                                function(data){
+                                        if(data){
+                                            data = $.parseJSON(data) 
+                                            
+                                            if(data.success == true){
+                                             //  $(".wrap.one-column").remove()
+                                             //  $(".mainContent").append(data.result)
+                                              // $(window).scrollTop($(".wrap.one-column").offset().top);
+                                                window.location.href="/tai-khoan/dang-nhap.html?username=" + $("#username").val()
+                                                return
+                                            }
+                                            $(".alert").remove()
+                                          
+                                            var str = "<div class = 'alert'>"
+                                                    + data.result
+                                                    + "</div>"
+                                            $(str).insertBefore($("#formReg"))
+                                            $(window).scrollTop($(".wrap.one-column").offset().top);
+                                        }
+                                    });
+                                })
+                                */
                     });
                 </script>
                 </head>
@@ -114,12 +165,13 @@
                                 <div class="wrap-signin clearfix">
                                     <div class="wrap-signin-left">
                                         <!--ALERT-->
-                                        <form class="form-horizontal signin" method="post" id="formReg" data-original-title="" title="">
+                                        ${error}
+                                        <form class="form-horizontal signin"  action="/tai-khoan/dang-ky.html" id="formReg" method ="post" data-original-title="" title="">
 
                                             <div class="control-group">
                                                 <label for="inputEmail" class="control-label"><span class="required">*</span>Tên truy cập:</label>
                                                 <div class="controls">
-                                                    <input type="text" value="" placeholder="" name="username" id="username" data-original-title="" title="">
+                                                    <input type="text" value="" placeholder="" name="cAccName" id="username" data-original-title="" title="">
                                                 </div>
                                             </div>
                                             <div class="control-group">
@@ -131,25 +183,28 @@
                                                             <div class="control-group">
                                                                 <label for="inputPassword" class="control-label"><span class="required">*</span>Nhập lại mật khẩu:</label>
                                                                 <div class="controls">
-                                                                    <input type="password" placeholder="" class="keyboardInput" name="confirm_password" id="confirm_password" data-original-title="" title=""><img src="/images/keyboard.png" alt="Bàn phím ảo" class="keyboardInputInitiator" title="Hiển thị bàn phím ảo">
+                                                                    <input type="password" placeholder="" class="keyboardInput" name="cPassWord" id="confirm_password" data-original-title="" title=""><img src="/images/keyboard.png" alt="Bàn phím ảo" class="keyboardInputInitiator" title="Hiển thị bàn phím ảo">
                                                                             </div>
                                                                             </div>
+                                                                            <!--
                                                                             <div class="control-group">
                                                                                 <label for="inputEmail" class="control-label"><span class="required">*</span>Email:</label>
                                                                                 <div class="controls">
-                                                                                    <input type="text" value="" placeholder="" name="email" id="email" data-original-title="" title="">
+                                                                                    <input type="text" value="" placeholder="" name="cEmail" id="email" data-original-title="" title="">
                                                                                 </div>
-                                                                            </div>
+                                                                            </div
+                                                                            -->
                                                                             <div class="control-group">
-                                                                                <label for="inputEmail" class="control-label"><span class="required">*</span>Captcha:</label>
+                                                                                <label for="inputEmail" class="control-label"><span class="required">*</span>Bảo mật:</label>
                                                                                 <div class="g-recaptcha controls" data-sitekey="6Ld5mwATAAAAANej65k2E_al8DuhsOkEZxaptzmx"></div>
                                                                             </div>
+                                                                            
                                                                             <div class="control-group">
                                                                                 <div class="controls submit">
                                                                                     <label class="checkbox">
                                                                                         <input type="checkbox" checked="checked" name="chkAgreement" value="1">
-                                                                                            Tôi đã đọc và chấp nhận các <a data-toggle="modal" role="button" href="#condition">điều khoản</a> của <strong>vohiep.com</strong> </label>
-                                                                                    <button class="btn-signin pull-left" type="submit">Đăng ký thành viên</button>
+                                                                                            Tôi đã đọc và chấp nhận các <a data-toggle="modal" role="button" href="#condition">điều khoản</a> của <strong>thapdaiphai.com</strong> </label>
+                                                                                    <button class="btn-signin pull-left">Đăng ký thành viên</button>
                                                                                     <div class="signin-note"><span class="required">(*)</span> Thông tin bắt buộc</div>
                                                                                 </div>
                                                                             </div>

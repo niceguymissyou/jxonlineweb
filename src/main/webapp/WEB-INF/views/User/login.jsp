@@ -8,20 +8,20 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
-    <!-- Mirrored from ids.vohiep.com/users/log   in by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 31 Dec 2014 07:21:48 GMT -->
-    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
             <title>Võ lâm truyền kỳ - thập đại phái</title>
             <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css" />
             <link rel="stylesheet" type="text/css" href="../assets/css/site.css" />
             <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css" />
-            <link rel="icon" type="image/png" href="../assets/images/favicon-tt.png">
-                <script type="text/javascript" src="../assets/js/jquery-1.9.1.min.js"></script>
-                <script type="text/javascript" src="../assets/js/bootstrap.min.js"></script>
-                <script type="text/javascript" src="../assets/js/appsScript.js"></script>
-                <script src="../js/thapthanh.js" type="text/javascript"></script>
+            <link rel="icon" type="image/png" href="../assets/images/favicon-tt.png"/>
+            <script type="text/javascript" src="../assets/js/jquery-1.9.1.min.js"></script>
+            <script type="text/javascript" src="../assets/js/bootstrap.min.js"></script>
+            <script type="text/javascript" src="../assets/js/appsScript.js"></script>
+            <script src="../js/thapthanh.js" type="text/javascript"></script>
+            <script src='https://www.google.com/recaptcha/api.js?hl=vi'></script>
                 <script>
                     $(document).ready(function () {
                         var posMenu = 0;
@@ -52,6 +52,31 @@
                                 showProfile = 0;
                             }
                         });
+                        
+                        $(".btn-signin.pull-left").click(function(){
+                                $(".alert").remove()
+                                $.post("/tai-khoan/dang-nhap.html",
+                                {'cAccName':$("#username").val(),
+                                'cPassWord': $("#password").val(),
+                                'g-recaptcha-response': $("#g-recaptcha-response").val()},
+                                
+                                function(data){
+                                    if(data){
+                                        data = $.parseJSON(data)
+                                        if(data.success == true){
+                                                window.location.href="/tai-khoan.html"
+                                                return
+                                          }
+                                          $(".alert").remove()
+                                            var str = "<div class = 'alert'>"
+                                                    + data.result
+                                                    + "</div>"
+                                            $(str).insertBefore($(".form-horizontal.signin"))
+                                            $(window).scrollTop($(".wrap.one-column").offset().top);
+                                            
+                                    }
+                                })
+                        })
                     });
                 </script>
                 </head>
@@ -113,11 +138,11 @@
                                 <!--Start: One column-->
                                 <div class="wrap-signin clearfix">
                                     <div class="wrap-signin-left pull-left">
-                                        <form class="form-horizontal signin" action="" method="post">
+                                        <div class="form-horizontal signin" >
                                             <div class="control-group">
                                                 <label class="control-label" for="inputEmail">Tên truy cập:</label>
                                                 <div class="controls">
-                                                    <input type="text" id="username" name="username" placeholder="">
+                                                    <input type="text" id="username" name="username" placeholder="" value="${username}">
                                                 </div>
                                             </div>
                                             <div class="control-group">
@@ -126,6 +151,12 @@
                                                     <input type="password" id="password" name="password" placeholder="">
                                                 </div>
                                             </div>
+                                                <!--
+                                            <div id = "captcha"  class="control-group">
+                                                <label class="control-label" for="inputPassword">Bảo mật:</label>
+                                                <div  class="g-recaptcha controls" data-sitekey="6Ld5mwATAAAAANej65k2E_al8DuhsOkEZxaptzmx"></div>
+                                            </div>
+                                                -->
                                             <div class="control-group">
                                                 <div class="controls submit">
                                                     <input type="hidden" id="ref" name="ref" value="/" />
@@ -135,7 +166,7 @@
                                                     -->
                                                 </div>
                                             </div>
-                                        </form>
+                                        </div>
                                     </div>
                                     <div class="openID pull-left";>
                                         <a href="https://facebook.com/" class="id-facebook blackwhite">Facebook</a>
@@ -164,6 +195,6 @@
                     </div>
                     <!--End: CONTENT--> 
                 </body>
-
+c
   
 </html>

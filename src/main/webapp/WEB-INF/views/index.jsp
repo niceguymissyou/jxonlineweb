@@ -31,9 +31,9 @@
  
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
-<meta name="description" content="Võ hiệp truyền kỳ - game online nhập vai xứng tầm chinh đồ webgame" />
-<meta name="keywords" content="chinh đồ, chinh do, chinh đồ web 2012, Võ hiệp, vo hiep Webgame, game nhập vai, game online" />  
-<meta name="author" content="Võ Hiệp Team" />
+<meta name="description" content="Võ hiệp truyền kỳ - game online nhập vai" />
+<meta name="keywords" content="vo lam, vo lam lau,vo lam lau, vo lam thap dai phai, Võ lâm , game nhập vai, game online" />  
+<meta name="author" content="Thập đại phái" />
 
 
 <style >
@@ -43,33 +43,6 @@
 }
 </style>
 
-<script type="text/javascript">
-
- 
-
-  var _gaq = _gaq || [];
-
-  _gaq.push(['_setAccount', 'UA-35045867-1']);
-
-  _gaq.push(['_setDomainName', 'vohiep.com']);
-
-  _gaq.push(['_trackPageview']);
-
- 
-
-  (function() {
-
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-
-  })();
-
- 
-
-</script>
 </head>
 <body>
     <script src="vohiep.com/js/jquery.tinycarousel.min.js" charset="utf-8" type="text/javascript"></script>
@@ -143,7 +116,7 @@
 <div class="main-left">
     <!-- Begin form login -->
 <div id="login">
-      <form action="http://vh.vohiep.com/user/login" method="post">
+      <form action="http://thapdaiphai.com/tai-khoan/dang-nhap.html" method="post">
    	<table border="0" cellspacing="0" cellpadding="0" class="table_login" width="100%">
          <tr>
             <td width="35%" align="left" class="tableTextLeft"><label style="color:#fffb96;cursor:pointer" for="username">Tài khoản :</label></td>

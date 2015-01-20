@@ -28,4 +28,40 @@
         <param-name>contextConfigLocation</param-name>
          <param-value>/WEB-INF/applicationContext.xml</param-value>
     </context-param>
+    
+    <filter>
+        <filter-name>AdminFilter</filter-name>
+        <filter-class>
+            com.Webgame.Filter.AdminFilter
+        </filter-class>
+        <init-param>
+            <param-name>test-param</param-name>
+            <param-value>This parameter is for testing.</param-value>
+        </init-param>
+    </filter>   
+    <filter-mapping>
+        <filter-name>AdminFilter</filter-name>
+        <url-pattern>/admin/*</url-pattern>  
+        <url-pattern>/admin.html</url-pattern>        
+    </filter-mapping>
+    
+    <filter>
+        <filter-name>UserFilter</filter-name>
+        <filter-class>
+            com.Webgame.Filter.UserFilter
+        </filter-class>
+        <init-param>
+            <param-name>test-param</param-name>
+            <param-value>This parameter is for testing.</param-value>
+        </init-param>
+    </filter>   
+    <filter-mapping>
+        <filter-name>UserFilter</filter-name>
+        <url-pattern>/tai-khoan.html</url-pattern>    
+        <url-pattern>/tai-khoan/doi-mat-khau.html</url-pattern> 
+        <url-pattern>/tai-khoan/doi-mat-khau-1.html</url-pattern> 
+        <url-pattern>/tai-khoan/nap-the.html</url-pattern> 
+        <url-pattern>/tai-khoan/kich-acc.html</url-pattern>
+        <url-pattern>/tai-khoan/thong-tin.htm</url-pattern> 
+    </filter-mapping>
 </web-app>
