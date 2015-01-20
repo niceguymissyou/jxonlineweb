@@ -218,9 +218,10 @@ public class UserController {
         return new ResponseEntity<String>(gson.toJson(jsonResponse), responseHeaders, HttpStatus.CREATED);
     }
     @RequestMapping(value = "/dang-xuat" , method = RequestMethod.GET)
-    public ModelAndView dangxuat(HttpSession session) {
+    public ModelAndView dangxuat(HttpSession session, HttpServletRequest request) {
         ModelAndView model = new ModelAndView();
-        model.setViewName("redirect:/tai-khoan/dang-nhap.html");
+        String redirectUrl = request.getScheme() + "://thapdaiphai.com/tai-khoan/dang-nhap.html";
+        model.setViewName("redirect:" + redirectUrl);
         session.invalidate();
         return model;
     }
