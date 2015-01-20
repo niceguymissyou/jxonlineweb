@@ -129,10 +129,10 @@
             <td align="left" class="tableTextLeft"><label style="color:#fffb96;cursor:pointer" for="password">Mật khẩu :</label></td>
             </tr>
          <tr>
-            <td><input type="password" name="password" id="password" class="inputText w60pe keyboardInput" /></td>
+            <td><input type="password" name="" id="password" class="inputText w60pe keyboardInput" /></td>
          </tr>
          <tr>
-            <td><input type="submit" name="button" id="button" value="Đăng nhập" class="modal-buttonOK"/></td>
+            <td><input type="submit" name="" id="button" value="Đăng nhập" class="modal-buttonOK"/></td>
          </tr>
          
          <tr>
