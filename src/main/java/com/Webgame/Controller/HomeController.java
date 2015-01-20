@@ -38,15 +38,15 @@ public class HomeController {
     @Autowired
     PostsService postsService;
     
-    public ModelAndView model = new ModelAndView();
-    
     @RequestMapping("/index")
     public ModelAndView index(){
+       ModelAndView model = new ModelAndView();
         model.setViewName("index");   
         return model;
     }
     @RequestMapping("/remember")
     public ModelAndView abc(HttpSession session){
+        ModelAndView model = new ModelAndView();
         model.setViewName("remember");
         model.addObject("user", session.getAttribute("user"));
         return model;
@@ -109,8 +109,15 @@ public class HomeController {
         responseHeaders.add("Content-Type", "text/html; charset=UTF-8");
         return new ResponseEntity<String>(gson.toJson(lstPost), responseHeaders, HttpStatus.CREATED);
     }
-    
-    @RequestMapping(value = "/{post_link}-post", method = RequestMethod.GET)
+    @RequestMapping("/{post_link}-post")
+    public ModelAndView postView(@PathVariable("post_link") String post_link){
+        ModelAndView model = new ModelAndView();
+        model.setViewName("Home/post");
+        model.addObject("url", post_link + "-post-1.html");
+        
+        return model;
+    }
+    @RequestMapping(value = "/{post_link}-post-1", method = RequestMethod.GET)
     public @ResponseBody
     ResponseEntity<String> Post(@PathVariable("post_link") String post_link, HttpServletRequest request, HttpServletResponse response) { 
         response.setCharacterEncoding("UTF-8");

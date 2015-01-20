@@ -37,9 +37,7 @@ public class UserFilter implements Filter {
         HttpSession session = ((HttpServletRequest) request).getSession();
          
          if (session.getAttribute("user") != null){
-             chain.doFilter(req,res); 
-            
-             
+             chain.doFilter(req,res);
          } else{
           RequestDispatcher rd =  req.getRequestDispatcher("/tai-khoan/dang-nhap.html");
           rd.forward(req, res);
