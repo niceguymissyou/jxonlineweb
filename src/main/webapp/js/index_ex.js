@@ -97,6 +97,7 @@
                     var news = $.fn.template(str, {
                        // "Post_link": value.Post_link + "-post.html",
                         "Post_subject": value.Post_subject,
+                        "Post_link": value.Post_link + "-post.html",
                         "Post_time": ""
                     })
                     $("#tabs-13 ul").append(news);
