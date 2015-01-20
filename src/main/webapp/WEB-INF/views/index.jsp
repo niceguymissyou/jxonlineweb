@@ -116,7 +116,7 @@
 <div class="main-left">
     <!-- Begin form login -->
 <div id="login">
-      <form action="http://thapdaiphai.com/tai-khoan/dang-nhap.html" method="post">
+      <form action="http://thapdaiphai.com/tai-khoan/dang-nhap.html" method="get">
    	<table border="0" cellspacing="0" cellpadding="0" class="table_login" width="100%">
          <tr>
             <td width="35%" align="left" class="tableTextLeft"><label style="color:#fffb96;cursor:pointer" for="username">Tài khoản :</label></td>
