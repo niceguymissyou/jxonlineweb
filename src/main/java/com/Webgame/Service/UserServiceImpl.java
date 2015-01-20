@@ -105,18 +105,18 @@ public class UserServiceImpl implements UserService {
     @Override
     public boolean PassChange(PassChangeForm passChangeForm , String cAccName) {
         try {
-            String sql = "update Account_Info set cPassWord = ? where cAccName = ? and cPassWord = ?";
+            String sql = "update Account_Info set cPassWord = ?, cSecPassWord = ? where cAccName = ? and cPassWord = ?";
             JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
             //Mssql
             jdbcTemplate.update(
                     sql,
-                    new Object[]{md5(passChangeForm.getcNewPassWord()), cAccName,
+                    new Object[]{md5(passChangeForm.getcNewPassWord()),md5(passChangeForm.getcNewPassWord()), cAccName,
                         md5(passChangeForm.getcPassWord())});
 
-            String sql1 = "update user set password1 = ? where username = ? and password1 = ?";
+            String sql1 = "update user set password1 = ?, password2 = ?  where username = ? and password1 = ?";
 
             jdbcTemplate = new JdbcTemplate(dataSourceMysql);
-            jdbcTemplate.update(sql1, new Object[]{md5(passChangeForm.getcNewPassWord()), cAccName,
+            jdbcTemplate.update(sql1, new Object[]{md5(passChangeForm.getcNewPassWord()),md5(passChangeForm.getcNewPassWord()), cAccName,
                 md5(passChangeForm.getcPassWord())});
             
             return true;
