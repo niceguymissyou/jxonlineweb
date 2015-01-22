@@ -115,7 +115,7 @@ public class AdminController {
             return modelAndView;
         }
 
-        if (postsService.insert(post)) {
+        if (!postsService.insert(post)) {
             //post.setPost_text("Đăng bài không thành công");
             postsService.editData(post);
             for (int i = 0; i < posts.size(); i++) {
