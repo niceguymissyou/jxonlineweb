@@ -108,7 +108,7 @@
 
         $.ajax({
             type: "get",
-            url: "<%=request.getContextPath()%>/admin/postdelete.html",
+            url: "/admin/postdelete.html",
             cache: true,
             data: {Post_link: post_link},
             success: function (response) {
