@@ -21,7 +21,7 @@
                 $.each(data, function(index, value){
                     if(index > 5)   return; 
                     var str = "<li>"
-                        + "<a href='news/list/12/He-thong.html' class='type'>[Tin Tức]</a>"
+                        + "<a href='/tin-tuc-lst.html' class='type'>[Tin Tức]</a>"
                         + "<a href='{Post_link}'>{Post_subject}</a>"
                         + "<span class='time'>{Post_time}</span>"
                         + "</li>";
@@ -44,7 +44,7 @@
                 $.each(data, function(index, value){
                     if(index > 5)   return; 
                     var str = "<li>"
-                        + "<a href='news/list/12/He-thong.html' class='type'>[Sự Kiện]</a>"
+                        + "<a href='/su-kien-lst.html' class='type'>[Sự Kiện]</a>"
                         + "<a  href='{Post_link}'>{Post_subject}</a>"
                         + "<span class='time'>{Post_time}</span>"
                         + "</li>";
@@ -67,7 +67,7 @@
                 $.each(data, function(index, value){
                     if(index > 5)   return; 
                     var str = "<li>"
-                        + "<a href='news/list/12/He-thong.html' class='type'>[Tính Năng]</a>"
+                        + "<a href='/tinh-nang-lst.html' class='type'>[Tính Năng]</a>"
                         + "<a  href='{Post_link}'>{Post_subject}</a>"
                         + "<span class='time'>{Post_time}</span>"
                         + "</li>";
@@ -90,7 +90,7 @@
                 $.each(data, function(index, value){
                     if(index > 5)   return; 
                     var str = "<li>"
-                        + "<a href='news/list/12/He-thong.html' class='type'>[Cẩm Nang]</a>"
+                        + "<a href='/cam-nang-lst.html' class='type'>[Cẩm Nang]</a>"
                         + "<a href='{Post_link}'>{Post_subject}</a>"
                         + "<span class='time'>{Post_time}</span>"
                         + "</li>";
