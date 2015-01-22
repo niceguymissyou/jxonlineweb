@@ -133,6 +133,7 @@
                            window.location.href = "/tai-khoan/nap-the.html";
                        }
                     }
+                     $(window).scrollTop($("#alert").offset().top);
                    
                    
                     
