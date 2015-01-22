@@ -50,12 +50,13 @@
                             if(data){
                                 $.each(data,function(index,val){
                                   var str = "<li><span class='time'>[{Post_time}]</span>"
-                                   +      "<a href='' class='title-arti'><b>{Post_subject}</b></a>"
+                                   +      "<a href='{Post_link}' class='title-arti'><b>{Post_subject}</b></a>"
                                    +"</li>"
                                     d = new Date(val.Post_time)
                                     d = d.getDate() + "-" + (d.getMonth() + 1) + "-" + d.getFullYear(); 
                                     str =        $.fn.template(str,{'Post_subject':val.Post_subject,
-                                                                    'Post_time':d })    
+                                                                    'Post_time':d,
+                                                                    'Post_link': val.Post_link + "-post.html"})    
                                     $(".cont-ins ul").append(str);
                                 })
 

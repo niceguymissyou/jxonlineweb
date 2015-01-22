@@ -55,6 +55,7 @@
                         
                         $(".btn-signin.pull-left").click(function(){
                                 $(".alert").remove()
+                                $(".alert1").remove()
                                 $.post("/tai-khoan/dang-nhap.html",
                                 {'cAccName':$("#username").val(),
                                 'cPassWord': $("#password").val(),
@@ -79,6 +80,16 @@
                         })
                     });
                 </script>
+                <style>
+                        .alert1 {
+                        background-color: #def0d8;
+                        border: 1px solid #468847;
+                        color: #468847;
+                        margin-bottom: 20px;
+                        padding: 8px 35px 8px 14px;
+                        text-shadow: none;
+                    }
+                </style>
                 </head>
                 <body>
                     <!--Start: HEADER-->
@@ -138,6 +149,7 @@
                                 <!--Start: One column-->
                                 <div class="wrap-signin clearfix">
                                     <div class="wrap-signin-left pull-left">
+                                        <div class="alert1">Chào mừng! bạn đến với Võ lâm thập đại phái</div>
                                         <div class="form-horizontal signin" >
                                             <div class="control-group">
                                                 <label class="control-label" for="inputEmail">Tên truy cập:</label>
