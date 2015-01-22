@@ -9,6 +9,7 @@ import com.Webgame.Form.LoginForm;
 import com.Webgame.Form.PassChangeForm;
 import com.Webgame.Form.RegisterForm;
 import com.Webgame.Form.UpdateInfoForm;
+import com.Webgame.Model.CardHistory;
 import com.Webgame.Model.User;
 
 /**
@@ -34,5 +35,11 @@ public interface UserService {
     public boolean IsExistsEmail(String email);
     
     public boolean IsExistsUserName(String userName);
+    
+    public boolean insertCardHistory(CardHistory cardHistory);
+    
+    public boolean NapCard(CardHistory cardHistory);
+    
+    public int SoDu(String username);
     
 }

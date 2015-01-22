@@ -11,11 +11,17 @@ import com.Webgame.Form.RegisterForm;
 import com.Webgame.Form.UpdateInfoForm;
 import com.Webgame.Model.*;
 import com.Webgame.Service.UserService;
+import com.Webgame.lib.CardLimit;
+import com.Webgame.lib.JsonCreditCar;
+import static com.Webgame.lib.JsonReadFromUrl.readUrl;
 import com.Webgame.lib.JsonResponse;
 import static com.Webgame.lib.MD5.md5;
 import com.Webgame.lib.ReCaptchaGoogle;
 import com.Webgame.lib.ReCaptchaImpl;
 import com.google.gson.Gson;
+import java.util.Collections;
+import java.util.Date;
+import java.util.LinkedList;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -43,7 +49,9 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 @RequestMapping(value = "/tai-khoan")
 public class UserController {
-
+    
+    private static List<CardLimit> UserCardLimitlst = Collections.synchronizedList(new LinkedList<CardLimit>());
+    
     @Autowired
     ReCaptchaGoogle reCaptcha;
 
@@ -225,8 +233,68 @@ public class UserController {
         session.invalidate();
         return model;
     }
+    
+    @RequestMapping("/nap-the")
+    public ModelAndView napTheView(HttpSession session) throws Exception {
+        ModelAndView model = new ModelAndView();
+        model.addObject("sodu", userService.SoDu(session.getAttribute("user").toString()));
+        model.setViewName("User/napthe");
+        return model;
+    }
+    @RequestMapping(value ="/nap-the",method = RequestMethod.POST )
+    public @ResponseBody
+    ResponseEntity<String> napThe(@ModelAttribute("lstTelco") String lstTelco,
+            @ModelAttribute("txtSeri") String txtSeri,
+             @ModelAttribute("txtCode") String txtCode,HttpServletResponse response,HttpSession session) throws Exception {
+        ModelAndView model = new ModelAndView();
+        String url = "http://service.thapdaiphai.com/process.php?";
+        url += "lstTelco=" + lstTelco +
+                "&txtSeri=" + txtSeri +
+                "&txtCode=" + txtCode;
+        //url = "https://www.google.com/recaptcha/api/siteverify";
+        String json = "";
+        json = readUrl(url);
+        Gson gson = new Gson();
+        JsonCreditCar jsonCreditCar = gson.fromJson(json, JsonCreditCar.class);      
+        CardHistory cardHistoy = new CardHistory(
+                        session.getAttribute("user").toString(),
+                        jsonCreditCar.resultCode,
+                        jsonCreditCar.transactionKey,
+                        new Date()
+                );
+        userService.insertCardHistory(cardHistoy);
+        if (jsonCreditCar.resultCode >= 10000 && jsonCreditCar.resultCode % 10000 == 0) {
+            userService.NapCard(cardHistoy);
+            for (int i = 0; i < UserCardLimitlst.size() - 1; i++) {
+                if (UserCardLimitlst.get(i).username.equals(session.getAttribute("user"))) {
+                  UserCardLimitlst.remove(i);
+                }
+            }
+        } else {
+            boolean b = true;
+            for (int i = 0; i < UserCardLimitlst.size() - 1; i++) {
+                if (UserCardLimitlst.get(i).username.equals(session.getAttribute("user"))) {
+                    b = false;
+                    if (UserCardLimitlst.get(i).count > 3) {
+                        session.invalidate();
+                        jsonCreditCar.resultCode = -1007;
+                    } else  UserCardLimitlst.get(i).count++;
+                   break;
+                }
+            }
+            if (b) {
+                UserCardLimitlst.add(new CardLimit(session.getAttribute("user").toString(),new Date(),0));
+            }
+            
+        }
+        response.setCharacterEncoding("UTF-8");
+        HttpHeaders responseHeaders = new HttpHeaders();
+        responseHeaders.add("Content-Type", "text/html; charset=UTF-8");
+        return new ResponseEntity<String>(gson.toJson(jsonCreditCar), responseHeaders, HttpStatus.CREATED);
+    }
+    
     @RequestMapping(method = RequestMethod.GET)
-    public ModelAndView index(HttpSession session) {
+    public ModelAndView index( HttpSession session) {
         ModelAndView model = new ModelAndView();
         model.setViewName("User/index");
         model.addObject("user", session.getAttribute("user"));

@@ -9,10 +9,12 @@ import com.Webgame.Form.LoginForm;
 import com.Webgame.Form.PassChangeForm;
 import com.Webgame.Form.RegisterForm;
 import com.Webgame.Form.UpdateInfoForm;
+import com.Webgame.Model.CardHistory;
 import com.Webgame.Model.User;
 import static com.Webgame.lib.MD5.md5;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,22 +33,7 @@ public class UserServiceImpl implements UserService {
     @Autowired
     DataSource dataSourceMysql;
 
-    @Override
-    public boolean IsExistsEmail(String email) {
-        String sql = "select * from user where email = ?";
-        JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSourceMysql);
-        List<User> userList = jdbcTemplate.query(sql, new Object[]{email}, new UserRowMapper());
-        return !userList.isEmpty();
-    }
-
-    @Override
-    public boolean IsExistsUserName(String userName) {
-        String sql = "select * from user where username = ?";
-        JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSourceMysql);
-        List<User> userList = (List<User>) jdbcTemplate.query(sql, new Object[]{userName}, new UserRowMapper());
-        return !userList.isEmpty();
-    }
-
+  
     public class UserRowMapper implements RowMapper<User> {
 
         @Override
@@ -67,6 +54,80 @@ public class UserServiceImpl implements UserService {
             return user;
         }
 
+    }
+    public class CardHistoryRowMapper implements RowMapper<CardHistory> {
+
+        @Override
+        public CardHistory mapRow(ResultSet resultSet, int rowNum) throws SQLException {
+            CardHistory cardHistory = new CardHistory();
+
+            cardHistory.setUsername(resultSet.getString("username"));
+            cardHistory.setResultcode(resultSet.getInt("resultcode"));
+            cardHistory.setTransactionkey(resultSet.getString("transactionkey"));
+            cardHistory.setTime(resultSet.getTimestamp("time"));
+            
+            return cardHistory;
+        }
+
+    }
+     @Override
+    public boolean IsExistsEmail(String email) {
+        String sql = "select * from user where email = ?";
+        JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSourceMysql);
+        List<User> userList = jdbcTemplate.query(sql, new Object[]{email}, new UserRowMapper());
+        return !userList.isEmpty();
+    }
+
+    @Override
+    public boolean IsExistsUserName(String userName) {
+        String sql = "select * from user where username = ?";
+        JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSourceMysql);
+        List<User> userList = (List<User>) jdbcTemplate.query(sql, new Object[]{userName}, new UserRowMapper());
+        return !userList.isEmpty();
+    }
+
+    @Override
+    public boolean insertCardHistory(CardHistory cardHistory) {
+        try {
+            String sql = "insert into carhistory(username,resultcode,transactionkey,time) "
+                    + "values(?,?,?,?)";
+            JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSourceMysql);
+            jdbcTemplate.update(
+                    sql,
+                    new Object[]{cardHistory.getUsername(),
+                        cardHistory.getResultcode(),
+                        cardHistory.getTransactionkey(),
+                        new Date()});
+        } catch (Exception ex) {
+            return false;
+        }
+       
+        return true;
+    }
+    
+      @Override
+    public boolean NapCard(CardHistory cardHistory) {
+        try {
+            if (cardHistory.getResultcode() >= 10000 && cardHistory.getResultcode() % 10000 == 0) {
+                String sql = "update Account_Info set nExtPoint1 = nExtPoint1 + ? where cAccName = ?";
+                JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+                jdbcTemplate.update(
+                        sql,
+                        new Object[]{cardHistory.getResultcode()/10000,cardHistory.getUsername()});
+                return true;
+            }
+        }catch(Exception ex){
+            
+        }        
+        return false;
+    }
+        @Override
+    public int SoDu(String username) {
+        String sql = "select nExtPoint1 from Account_Info where  cAccName = ?";
+        JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+        
+        return jdbcTemplate.queryForInt(sql,
+                new Object[]{username});
     }
 
     @Override
