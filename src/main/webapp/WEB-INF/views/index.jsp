@@ -201,11 +201,11 @@ $(function() {
         <div id="lienhe">
             <div class="mid">
                 <ul style="margin:auto;width:168px;">
-                    <li style="color:#FFF;line-height:19px;"> Hotline: 04-37585142<br />
-                        Mobile: 0962609634  <br />
-                 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;0902274388 <br/>
-						Thẻ nạp: 0969844284<br>
-                 		Email: contact@vohiep.com
+                    <li style="color:#FFF;line-height:19px;"> Hotline: <br />
+                        Mobile:   <br />
+                 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <br/>
+						Thẻ nạp: <br>
+                 		Email: 
                         </li>
                 </ul>
             </div>
@@ -439,7 +439,7 @@ $(function() {
                     <div class="gal-head"></div>
                     <div class="gal-mid">
                         <div class="new">
-                            <iframe frameborder="1" style="border: medium none; overflow: hidden; height: 265px; width: 370px;background:#fff;" scrolling="no" src="http://www.facebook.com/plugins/likebox.php?href=https://www.facebook.com/volamkyhiep2014?fref=ts;width=370&amp;colorscheme=light&amp;show_faces=true&amp;connections=9&amp;stream=false&amp;header=false&amp;height=265" id="demo"></iframe>
+                            <iframe frameborder="1" style="border: medium none; overflow: hidden; height: 265px; width: 370px;background:#fff;" scrolling="no" src="http://www.facebook.com/plugins/likebox.php?href=https://www.facebook.com/pages/V%C3%B5-L%C3%A2m-Th%E1%BA%ADp-%C4%90%E1%BA%A1i-Ph%C3%A1i/762627647151118?fref=ts;width=370&amp;colorscheme=light&amp;show_faces=true&amp;connections=9&amp;stream=false&amp;header=false&amp;height=265" id="demo"></iframe>
                         </div>
                     </div>
                     <div class="gal-bot"></div>
