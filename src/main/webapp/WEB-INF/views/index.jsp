@@ -16,6 +16,7 @@
 <link href="css/jquery.ui.tabs.css" rel="stylesheet" type="text/css" />
 <link href="css/jquery.fancybox-1.3.1.css" rel="stylesheet" type="text/css" />
 <link href="css/menu.css" rel="stylesheet" type="text/css" />
+<link href="assets/images/favicon-tt.png" type="image/png" rel="icon"/>
 
 <!--End css files-->
 <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
