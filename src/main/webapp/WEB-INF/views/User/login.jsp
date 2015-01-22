@@ -52,7 +52,14 @@
                                 showProfile = 0;
                             }
                         });
-                        
+                        $("#password").keypress(function (e) {
+                            var key = e.which;
+                            if(key == 13)  // the enter key code
+                             {
+                               $('.btn-signin.pull-left').click();
+                               return false;  
+                             }
+                       });   
                         $(".btn-signin.pull-left").click(function(){
                                 $(".alert").remove()
                                 $(".alert1").remove()
