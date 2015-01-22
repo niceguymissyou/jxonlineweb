@@ -63,7 +63,7 @@
             	<a href="ho-tro-vo-lam-thap-dai-phai.html" target="_blank" class="btn-hd">Tân thủ</a> 
             	<a href="tin-tuc-lst.html" class="btn-tt">Tin tức</a> 
             	<a href="cam-nang-lst.html" class="btn-cn">Cẩm nang</a>
-            	<a href="tai-khoan/nap-tien.html" class="btn-nt">Nạp tiền</a>
+            	<a href="tai-khoan/nap-the.html" class="btn-nt">Nạp tiền</a>
             	 
 <!--            	<a href="#" class="btn-nt">Nạp tiền</a> -->
             	<a href="" class="btn-dd">Diễn đàn</a> </div>
@@ -102,6 +102,23 @@
         if ($.browser.webkit) {
            $("#tab-noibat").css('padding-top', '75px');
         }
+        
+         $("#button").click(function(){
+                                $.post("/tai-khoan/dang-nhap.html",
+                                {'cAccName':$("#username").val(),
+                                'cPassWord': $("#password").val()},
+                                function(data){
+                                    if(data){
+                                        data = $.parseJSON(data)
+                                        if(data.success == true){
+                                                window.location.href="/tai-khoan.html"
+                                                return
+                                          }
+                                          window.location.href="/tai-khoan/dang-nhap.html"
+                                            
+                                    }
+                                })
+                        })
    }); 
     
 </script>
@@ -116,7 +133,7 @@
 <div class="main-left">
     <!-- Begin form login -->
 <div id="login">
-      <form action="http://thapdaiphai.com/tai-khoan/dang-nhap.html" method="get">
+      <div >
    	<table border="0" cellspacing="0" cellpadding="0" class="table_login" width="100%">
          <tr>
             <td width="35%" align="left" class="tableTextLeft"><label style="color:#fffb96;cursor:pointer" for="username">Tài khoản :</label></td>
@@ -132,7 +149,7 @@
             <td><input type="password" name="" id="password" class="inputText w60pe keyboardInput" /></td>
          </tr>
          <tr>
-            <td><input type="submit" name="" id="button" value="Đăng nhập" class="modal-buttonOK"/></td>
+            <td><input  name="" id="button" value="Đăng nhập" class="modal-buttonOK"/></td>
          </tr>
          
          <tr>
@@ -144,7 +161,7 @@
              <td align="center"><a href="tai-khoan/dang-ky.html"><img style="margin:9px 0" src="images/buttons/btn-sigup.png" alt="Đăng ký" height="36" width="112"></a></td>
          </tr>
       </table>
-   </form>
+   </div>
       </div>
 <!-- End form login -->
 
@@ -340,7 +357,7 @@ $(function() {
                                         	<div class="licheng">
                             <div class="lianjie"><a href="Huong-dan-nap-the-trong-Vo-Lam-Thap-Dai-Phai.html" target="_blank"><img width="105" height="70" border="0" src="upload/files/2012/6/13/20/2007539/797541615_12_thumb.png" alt="Võ lâm thập đái phái">&nbsp;</a></div>
                             <div class="licheng_cent">
-                                <h1 title="Võ lâm thập đái phái"><a href="/Huong-dan-nap-the-trong-Vo-Lam-Thap-Dai-Phai.html" class="text-elip"><font size="2" color="#ff00ff">Hướng dẫn nạp thẻ trong Võ Lâm Thập Đại Phái</font></a></h1>
+                                <h1 title="Võ lâm thập đái phái"><a href="/Huong-dan-nap-the-trong-Vo-Lam-Thap-Dai-Phai-post.html" class="text-elip"><font size="2" color="#ff00ff">Hướng dẫn nạp thẻ trong Võ Lâm Thập Đại Phái</font></a></h1>
                                 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/Huong-dan-nap-the-trong-Vo-Lam-Thap-Dai-Phai.html" target="_blank"><font color="#000000">Để nạp xu vào tài khoản chơi Võ Lâm Thập Đại Phái, chỉ cần vài bước sau đây sẽ rõ</font></a></p>
                                 <p>&nbsp;</p>
                             </div>
