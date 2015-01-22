@@ -61,7 +61,7 @@
             <div id="menu"> 
             	<a href="/" class="btn-lg-c">Võ Lâm Truyền Kỳ - Thập Đại Phái</a> 
             	<a href="/" class="btn-home">Trang chủ</a> 
-            	<a href="ho-tro-vo-lam-thap-dai-phai.html" target="_blank" class="btn-hd">Tân thủ</a> 
+            	<a href="ho-tro-vo-lam-thap-dai-phai-post.html" target="_blank" class="btn-hd">Tân thủ</a> 
             	<a href="tin-tuc-lst.html" class="btn-tt">Tin tức</a> 
             	<a href="cam-nang-lst.html" class="btn-cn">Cẩm nang</a>
             	<a href="tai-khoan/nap-the.html" class="btn-nt">Nạp tiền</a>

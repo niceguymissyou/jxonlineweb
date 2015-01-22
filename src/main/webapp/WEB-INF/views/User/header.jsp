@@ -20,7 +20,9 @@
             <script type="text/javascript" src="../assets/js/jquery-1.9.1.min.js"></script>
             <script type="text/javascript" src="../assets/js/bootstrap.min.js"></script>
             <script type="text/javascript" src="../assets/js/appsScript.js"></script>
+            <script type="text/javascript" src="../assets/js/jquery.blockUI.js"></script>
             <script src="../js/thapthanh.js" type="text/javascript"></script>
+            
             <script src='https://www.google.com/recaptcha/api.js?hl=vi'></script>
                 <script>
                     $(document).ready(function () {

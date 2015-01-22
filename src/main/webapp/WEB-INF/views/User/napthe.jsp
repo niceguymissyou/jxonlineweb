@@ -43,7 +43,7 @@
                 Số dư:
             </td>
             <td >
-                <b>${sodu} xu</b>
+                <b id = "xu">${sodu * 10}</b> xu
             </td>
 
         </tr>
@@ -100,6 +100,7 @@
 <script>
     $(document).ready(function () {
         $("#btnNapThe").click(function(){
+            $.blockUI();
              $("#alert").empty();
             $("#alert").removeClass()
             $.post("/tai-khoan/nap-the.html",
@@ -119,7 +120,7 @@
                     }
                     data = $.parseJSON(data)
                     if(data.resultCode >= 10000){
-                        
+                        $("#xu").text(data.resultCode/1000 + parseInt($("#xu").text()))
                        var str = "<center><strong>Chúc mừng!</strong> Bạn đã nạp thẻ thành công.</center>"
                        $("#alert").append(str);
                        $("#alert").addClass("alert1 alert-success");
@@ -136,6 +137,7 @@
                    
                     
                 }
+                $.unblockUI();
             })
         })
     })
