@@ -114,6 +114,7 @@
                     '-3' : "Thẻ không sử dụng được.",
                     '-10': "Nhập sai định dạng thẻ.",
                     '-1001' : "Nhập sai qúa 3 lần.",
+                    '-1003' : "IP không được phép truy cập.",
                     '-1002' : "Lỗi hệ thống",
                     '-1005' : "Loại thẻ không đúng",
                     '-1006' : "Hệ thống đang bảo trì"
