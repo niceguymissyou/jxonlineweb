@@ -65,9 +65,8 @@
             	<a href="tin-tuc-lst.html" class="btn-tt">Tin tức</a> 
             	<a href="cam-nang-lst.html" class="btn-cn">Cẩm nang</a>
             	<a href="tai-khoan/nap-the.html" class="btn-nt">Nạp tiền</a>
-            	 
-<!--            	<a href="#" class="btn-nt">Nạp tiền</a> -->
-            	<a href="" class="btn-dd">Diễn đàn</a> </div>
+            	<a href="" class="btn-dd">Diễn đàn</a>
+            </div>
         </div>
         <div class="btn-play">
             <object width="100%" height="100%" codebase=" http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
@@ -256,9 +255,9 @@ $(function() {
                             	   
                             		<div class="slide"><a href="news/view/637/Khuyen-Mai-Vxu-Khi-Chuyen-Khoan-Ngan-Hang-Hoac-Nap-Tien-Truc-Tiep.html"><img src="upload/files/2014/3/4/12/2007539/1438778979_gh_km.jpg" alt="Chinh đồ web 2012"></a></div>
                             	            -->   
-                                          <div class="slide"><a href="http://vohiep.com/news/view/175/Nap-Vxu-bang-the-ATM-noi-dia-the-tin-dung-quoc-te-Sieu-Loi-Nhuan.html"><img src="images/slide/openbeta.jpg" alt="Chinh đồ web 2012"></a></div>
-                                        <div class="slide"><a href="http://vohiep.com/news/view/175/Nap-Vxu-bang-the-ATM-noi-dia-the-tin-dung-quoc-te-Sieu-Loi-Nhuan.html"><img src="images/slide/huyenthoaictc.jpg" alt="Chinh đồ web 2012"></a></div>
-                                        <div class="slide"><a href="http://vohiep.com/news/view/175/Nap-Vxu-bang-the-ATM-noi-dia-the-tin-dung-quoc-te-Sieu-Loi-Nhuan.html"><img src="images/slide/tho.jpg" alt="Chinh đồ web 2012"></a></div>
+                                          <div class="slide"><a href="http://thapdaiphai.com/Huyen-thoai-vo-lam-thap-dai-phai-post.html"><img src="images/slide/openbeta.jpg" alt="Vo lam thap dai phai"></a></div>
+                                        <div class="slide"><a href="http://thapdaiphai.com/Huyen-thoai-vo-lam-thap-dai-phai-post.html"><img src="images/slide/huyenthoaictc.jpg" alt="Vo lam thap dai phai"></a></div>
+                                        <div class="slide"><a href="http://thapdaiphai.com/Huong-dan-tai-game-post.html"><img src="images/slide/tho.jpg" alt="Vo lam thap dai phai"></a></div>
                             </div>
                         </div>
                     </div>
