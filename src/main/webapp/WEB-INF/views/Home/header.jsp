@@ -202,11 +202,11 @@ $(function() {
         <div id="lienhe">
             <div class="mid">
                 <ul style="margin:auto;width:168px;">
-                    <li style="color:#FFF;line-height:19px;"> Hotline: 04-37585142<br />
-                        Mobile: 0962609634  <br />
-                 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;0902274388 <br/>
-						Thẻ nạp: 0969844284<br>
-                 		Email: contact@vohiep.com
+                    <li style="color:#FFF;line-height:19px;"> Hotline: <br />
+                        Mobile:   <br />
+                 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <br/>
+						Thẻ nạp: <br>
+                 		Email: 
                         </li>
                 </ul>
             </div>
