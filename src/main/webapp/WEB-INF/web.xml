@@ -64,7 +64,7 @@
         <url-pattern>/tai-khoan/kich-acc.html</url-pattern>
         <url-pattern>/tai-khoan/thong-tin.htm</url-pattern> 
     </filter-mapping>
-    <!--
+    
     <error-page>
         <error-code>404</error-code>
         <location>/WEB-INF/views/404.jsp</location>
@@ -77,7 +77,7 @@
         <error-code>500</error-code>
         <location>/WEB-INF/views/404.jsp</location>
     </error-page>
-    -->
+    
     <filter>
         <filter-name>encoding-filter</filter-name>
         <filter-class>
