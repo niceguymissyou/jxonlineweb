@@ -119,6 +119,10 @@
                                     }
                                 })
                         })
+                        
+        $("#btnnapthe").click(function(){
+            window.location.href="/tai-khoan/nap-the.html"
+        })
    }); 
     
 </script>
@@ -133,6 +137,21 @@
 <div class="main-left">
     <!-- Begin form login -->
 <div id="login">
+    <style>
+        #btnnapthe{
+            width:188px;
+            height:100px; 
+            background-color: Transparent;
+            background-repeat:no-repeat;
+            border: none;
+            cursor:pointer;
+            overflow: hidden;
+            outline:none;
+        }
+     </style>
+    <div style="width:188px;height:100px" >
+        <button id="btnnapthe"></button>
+    </div>
       <div >
    	<table border="0" cellspacing="0" cellpadding="0" class="table_login" width="100%">
          <tr>
