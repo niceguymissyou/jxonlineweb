@@ -175,7 +175,7 @@
                 <configuration>
                     <path>/thapdaiphai</path>
                     <update>true</update>
-                    <url>http://localhost:8084/manager/text</url>
+                    <url>http://localhost:8080/manager/text</url>
                     <username>ide</username>
                     <password>mikonmiken</password>
                 </configuration>
