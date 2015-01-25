@@ -274,9 +274,9 @@ $(function() {
                             	   
                             		<div class="slide"><a href="news/view/637/Khuyen-Mai-Vxu-Khi-Chuyen-Khoan-Ngan-Hang-Hoac-Nap-Tien-Truc-Tiep.html"><img src="upload/files/2014/3/4/12/2007539/1438778979_gh_km.jpg" alt="Chinh đồ web 2012"></a></div>
                             	            -->   
-                                          <div class="slide"><a href="http://thapdaiphai.com/Huyen-thoai-vo-lam-thap-dai-phai-post.html"><img src="images/slide/openbeta.jpg" alt="Vo lam thap dai phai"></a></div>
-                                        <div class="slide"><a href="http://thapdaiphai.com/Huyen-thoai-vo-lam-thap-dai-phai-post.html"><img src="images/slide/huyenthoaictc.jpg" alt="Vo lam thap dai phai"></a></div>
-                                        <div class="slide"><a href="http://thapdaiphai.com/Huong-dan-tai-game-post.html"><img src="images/slide/tho.jpg" alt="Vo lam thap dai phai"></a></div>
+                                          <div class="slide"><a href="http://thapdaiphai.com/Huyen-thoai-vo-lam-thap-dai-phai-post.html"><img src="images/slide/openbeta.png" alt="Vo lam thap dai phai"/></a></div>
+                                        <div class="slide"><a href="http://thapdaiphai.com/Huyen-thoai-vo-lam-thap-dai-phai-post.html"><img src="images/slide/huyenthoaictc.jpg" alt="Vo lam thap dai phai"/></a></div>
+                                        <div class="slide"><a href="http://thapdaiphai.com/Huong-dan-tai-game-post.html"><img src="images/slide/tho.jpg" alt="Vo lam thap dai phai"/></a></div>
                             </div>
                         </div>
                     </div>
@@ -358,7 +358,7 @@ $(function() {
                         <div class="bot"></div>
                     </div>
                     <div class="tese">
-                        <p><a href="#" target="_blank"><img width="438" height="105" border="0" src="images/banner-mid-big.jpg" alt="Chinh đồ web 2012"></a></p>
+                        <p><a href="#" target="_blank"><img width="438" height="105" border="0" src="images/banner-mid-big.png" alt="Vo lam thap dai phai"/></a></p>
                     </div>
                 </div>
                 <div class="main-right">
