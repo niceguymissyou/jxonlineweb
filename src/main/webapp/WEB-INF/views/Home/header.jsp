@@ -129,7 +129,7 @@
         }
      </style>
     <div style="width:188px;height:100px" >
-        <button id="btnnapthe"></button>
+        <a href = "/tai-khoan/nap-the.html"><button id="btnnapthe"></button></a>
     </div>
     
       <form action="http://thapdaiphai.com/tai-khoan/dang-nhap.html" method="get">
