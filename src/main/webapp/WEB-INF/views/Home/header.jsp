@@ -64,7 +64,7 @@
             	<a href="ho-tro-vo-lam-thap-dai-phai.html" target="_blank" class="btn-hd">Tân thủ</a> 
             	<a href="tin-tuc-lst.html" class="btn-tt">Tin tức</a> 
             	<a href="cam-nang-lst.html" class="btn-cn">Cẩm nang</a>
-            	<a href="tai-khoan/nap-tien.html" class="btn-nt">Nạp tiền</a>
+            	<a href="tai-khoan/nap-the.html" class="btn-nt">Nạp tiền</a>
             	 
 <!--            	<a href="#" class="btn-nt">Nạp tiền</a> -->
             	<a href="" class="btn-dd">Diễn đàn</a> </div>

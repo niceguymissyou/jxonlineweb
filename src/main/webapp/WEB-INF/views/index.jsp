@@ -274,7 +274,7 @@ $(function() {
                             	   
                             		<div class="slide"><a href="news/view/637/Khuyen-Mai-Vxu-Khi-Chuyen-Khoan-Ngan-Hang-Hoac-Nap-Tien-Truc-Tiep.html"><img src="upload/files/2014/3/4/12/2007539/1438778979_gh_km.jpg" alt="Chinh đồ web 2012"></a></div>
                             	            -->   
-                                          <div class="slide"><a href="http://thapdaiphai.com/Huyen-thoai-vo-lam-thap-dai-phai-post.html"><img src="images/slide/openbeta.png" alt="Vo lam thap dai phai"/></a></div>
+                                          <div class="slide"><a href="http://thapdaiphai.com/Huyen-thoai-vo-lam-thap-dai-phai-post.html"><img src="images/slide/openbeta.jpg" alt="Vo lam thap dai phai"/></a></div>
                                         <div class="slide"><a href="http://thapdaiphai.com/Huyen-thoai-vo-lam-thap-dai-phai-post.html"><img src="images/slide/huyenthoaictc.jpg" alt="Vo lam thap dai phai"/></a></div>
                                         <div class="slide"><a href="http://thapdaiphai.com/Huong-dan-tai-game-post.html"><img src="images/slide/tho.jpg" alt="Vo lam thap dai phai"/></a></div>
                             </div>
@@ -358,7 +358,7 @@ $(function() {
                         <div class="bot"></div>
                     </div>
                     <div class="tese">
-                        <p><a href="#" target="_blank"><img width="438" height="105" border="0" src="images/banner-mid-big.png" alt="Vo lam thap dai phai"/></a></p>
+                        <p><a href="#" target="_blank"><img width="438" height="105" border="0" src="images/banner-mid-big.jpg" alt="Vo lam thap dai phai"/></a></p>
                     </div>
                 </div>
                 <div class="main-right">
@@ -475,7 +475,7 @@ $(function() {
                     <div class="gal-head"></div>
                     <div class="gal-mid">
                         <div class="new">
-                            <iframe frameborder="1" style="border: medium none; overflow: hidden; height: 265px; width: 370px;background:#fff;" scrolling="no" src="http://www.facebook.com/plugins/likebox.php?href=https://www.facebook.com/pages/V%C3%B5-L%C3%A2m-Th%E1%BA%ADp-%C4%90%E1%BA%A1i-Ph%C3%A1i/762627647151118?fref=ts;width=370&amp;colorscheme=light&amp;show_faces=true&amp;connections=9&amp;stream=false&amp;header=false&amp;height=265" id="demo"></iframe>
+                            <iframe frameborder="1" style="border: medium none; overflow: hidden; height: 265px; width: 370px;background:#fff;" scrolling="no" src="http://www.facebook.com/plugins/likebox.php?href=https://www.facebook.com/thapdaiphai?fref=ts;width=370&amp;colorscheme=light&amp;show_faces=true&amp;connections=9&amp;stream=false&amp;header=false&amp;height=265" id="demo"></iframe>
                         </div>
                     </div>
                     <div class="gal-bot"></div>
