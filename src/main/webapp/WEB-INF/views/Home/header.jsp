@@ -221,7 +221,7 @@ $(function() {
                         Mobile:   <br />
                  		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <br/>
 						Thẻ nạp: thapdaiphai.com@gmail.com<br>
-                 		Email:thapdaiphai.com@gmail.com 
+                 		Email: thapdaiphai.com@gmail.com 
                         </li>
                 </ul>
             </div>
