@@ -241,8 +241,8 @@ $(function() {
                     <li style="color:#FFF;line-height:19px;"> Hotline: <br />
                         Mobile:   <br />
                  		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <br/>
-						Thẻ nạp: <br>
-                 		Email: 
+						Thẻ nạp: thapdaiphai.com@gmail.com<br>
+                 		Email: thapdaiphai.com@gmail.com
                         </li>
                 </ul>
             </div>
@@ -456,9 +456,17 @@ $(function() {
                                     <!-- List news bi kip cat 15 -->
                                     <div style="display: block;" id="tabs-33" class="bg-content-1 ui-tabs-panel ui-widget-content ui-corner-bottom">
                                         <ul>
-                                            <li><a class="type" href="news/list/15/Bi-kip.html">[Hoạt Động]</a><a href="news/view/39/Doi-mau-sung-vat.html">Vượt Ải</a><span class="time">00h - 23h</span></li>
-                                            <li><a class="type" href="news/list/15/Bi-kip.html">[Hoạt Động]</a><a href="news/view/39/Doi-mau-sung-vat.html">Phong Lăng Độ</a><span class="time">00h - 23h</span></li>
-                                            <li><a class="type" href="news/list/15/Bi-kip.html">[Hoạt Động]</a><a href="news/view/39/Doi-mau-sung-vat.html">Hạt Huy Hoàng</a><span class="time">12h00 - 12h30</span></li>
+               
+                                            <li><a class="type" href="/tinh-nang-lst.html">[Hoạt Động]</a><a href="news/view/39/Doi-mau-sung-vat.html">8h-9h</a><span class="time">Phong lăng độ</span></li>
+                                            <li><a class="type" href="/tinh-nang-lst.html">[Hoạt Động]</a><a href="news/view/39/Doi-mau-sung-vat.html">11h-12h</a><span class="time">Tống Kim</span></li>
+                                            <li><a class="type" href="/tinh-nang-lst.html">[Hoạt Động]</a><a href="news/view/39/Doi-mau-sung-vat.html">12h-12h30</a><span class="time">Hạt huy hoàng</span></li>
+                                            <li><a class="type" href="/tinh-nang-lst.html">[Hoạt Động]</a><a href="news/view/39/Doi-mau-sung-vat.html">13h-14h</a><span class="time">Phong lăng độ</span></li>
+                                            <li><a class="type" href="/tinh-nang-lst.html">[Hoạt Động]</a><a href="news/view/39/Doi-mau-sung-vat.html">15h-16h</a><span class="time">Tống Kim</span></li>
+                                            <li><a class="type" href="/tinh-nang-lst.html">[Hoạt Động]</a><a href="news/view/39/Doi-mau-sung-vat.html">17h-18h</a><span class="time">Tống Kim</span></li>
+                                            <li><a class="type" href="/tinh-nang-lst.html">[Hoạt Động]</a><a href="news/view/39/Doi-mau-sung-vat.html">18h-19h</a><span class="time">Phong lăng độ</span></li>
+                                            <li><a class="type" href="/tinh-nang-lst.html">[Hoạt Động]</a><a href="news/view/39/Doi-mau-sung-vat.html">19h-20h,21h-22h</a><span class="time">Tống Kim</span></li>
+                                            <li><a class="type" href="/tinh-nang-lst.html">[Hoạt Động]</a><a href="news/view/39/Doi-mau-sung-vat.html">20h</a><span class="time">Boss tiểu</span></li>
+                                           s
                                         </ul>
                                     </div>
                                 </div>
