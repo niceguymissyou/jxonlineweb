@@ -220,8 +220,8 @@ $(function() {
                     <li style="color:#FFF;line-height:19px;"> Hotline: <br />
                         Mobile:   <br />
                  		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <br/>
-						Thẻ nạp: <br>
-                 		Email: 
+						Thẻ nạp: thapdaiphai.com@gmail.com<br>
+                 		Email:thapdaiphai.com@gmail.com 
                         </li>
                 </ul>
             </div>
