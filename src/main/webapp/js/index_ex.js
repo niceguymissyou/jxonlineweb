@@ -124,10 +124,11 @@
                         + "<div class = 'content'>"
                         + "<div class = 'new-content'>"
                         + "{Post_text}"
+                        + "<div class='fb-comments' data-href='http://thapdaiphai.com?{Post_subject}' data-numposts='5' data-colorscheme='light'></div>"
                         + "</div>"
                         + "</div>"
                         + "</div>"
-                content = $.fn.template(content,{'Post_text':data.Post_text});
+                content = $.fn.template(content,{'Post_text':data.Post_text, 'Post_subject':data.Post_subject});
                 $(".ct-mr").append(content)
                 var footer = "<div class='dt-bot'> </div>"
                 $(".ct-mr .dt-mid").append(footer)
