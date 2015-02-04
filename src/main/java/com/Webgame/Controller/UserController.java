@@ -292,7 +292,19 @@ public class UserController {
         responseHeaders.add("Content-Type", "text/html; charset=UTF-8");
         return new ResponseEntity<String>(gson.toJson(jsonCreditCar), responseHeaders, HttpStatus.CREATED);
     }
-    
+    @RequestMapping(value ="/kick-acc",method = RequestMethod.GET )
+    public @ResponseBody
+    ResponseEntity<String> kickAcc(HttpServletResponse response,HttpSession session){
+        Gson gson = new Gson();
+        
+        User u = new User();
+        u.setcAccName(session.getAttribute("user").toString());
+        
+        response.setCharacterEncoding("UTF-8");
+        HttpHeaders responseHeaders = new HttpHeaders();
+        responseHeaders.add("Content-Type", "text/html; charset=UTF-8");
+        return new ResponseEntity<String>(gson.toJson(userService.kickAcc(u)), responseHeaders, HttpStatus.CREATED);
+    }
     @RequestMapping(method = RequestMethod.GET)
     public ModelAndView index( HttpSession session) {
         ModelAndView model = new ModelAndView();
