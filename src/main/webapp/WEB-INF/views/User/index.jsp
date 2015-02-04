@@ -95,6 +95,17 @@
                                   }
                               })
                           })
+                          
+                          $(".kickacc").click(function(){
+                              $.blockUI();
+                              $.getJSON('/tai-khoan/kick-acc.html',function(data){
+                                  if(data){
+                                      if(data == true)
+                                          alert("kich acc thành công!")
+                                  }
+                                  $.unblockUI();
+                              })
+                          });
                     });
                 </script>
                 </head>
@@ -188,6 +199,11 @@
                                     <div class="tab-content wrap-signin-left pull-left">
                                         <div id="infobasic" class="tab-pane fade active in">
                                             <div  class="form-horizontal signin">
+                                                  <div class="control-group">
+                                                    <div class="controls">
+                                                        <button class="kickacc" >Kich acc</button>
+                                                    </div>
+                                                </div>
                                                 <div class="control-group">
                                                     <label for="inputEmail" class="control-label"><span class="required">*</span>Tên :</label>
                                                     <div class="controls">
